@@ -1,0 +1,36 @@
+link_id,act,source_node_id,target_node_id,value_usd,metric_id,fiscal_year,is_estimated,source_id,source_url,access_date,notes
+link-0001,3,inst-166027,sink-instruction,2206341000,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0002,3,inst-166027,sink-research,583931000,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0003,3,inst-166027,sink-student_services,187534000,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0004,3,inst-166027,sink-auxiliary,428860000,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0005,3,inst-166027,sink-other,2023467000,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0006,3,inst-166683,sink-instruction,1700985000,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0007,3,inst-166683,sink-research,410937000,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0008,3,inst-166683,sink-student_services,158607000,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0009,3,inst-166683,sink-auxiliary,223364000,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0010,3,inst-166683,sink-other,1499435000,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0011,3,inst-164988,sink-instruction,960618000,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0012,3,inst-164988,sink-research,305161000,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0013,3,inst-164988,sink-student_services,83643000,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0014,3,inst-164988,sink-auxiliary,145617000,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0015,3,inst-164988,sink-other,822036000,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0016,3,inst-167358,sink-instruction,686833000,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0017,3,inst-167358,sink-research,159495000,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0018,3,inst-167358,sink-student_services,32663000,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0019,3,inst-167358,sink-auxiliary,84036000,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0020,3,inst-167358,sink-other,705012000,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0021,3,inst-164924,sink-instruction,415490585,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0022,3,inst-164924,sink-research,127655836,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0023,3,inst-164924,sink-student_services,49789633,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0024,3,inst-164924,sink-auxiliary,103062836,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0025,3,inst-164924,sink-other,260511445,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0026,3,inst-168148,sink-instruction,471248047,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0027,3,inst-168148,sink-research,112435117,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0028,3,inst-168148,sink-student_services,38868109,opex_student_services,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0029,3,inst-168148,sink-auxiliary,71770532,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0030,3,inst-168148,sink-other,396447651,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0031,3,inst-167987,sink-instruction,9338000,opex_instruction,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0032,3,inst-167987,sink-research,7063000,opex_research,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0033,3,inst-167987,sink-auxiliary,2800000,opex_auxiliary,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,
+link-0034,3,inst-167987,sink-other,270818000,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines
+link-0035,3,inst-AGG_OTHERS,sink-other,2194567396,opex_other,2022,false,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21,Residual of total opex minus mapped functional lines

@@ -1,0 +1,96 @@
+/* sections.css — continuous editorial story flow
+ *
+ * Every section should read as one scroll narrative (not stacked slides):
+ *   Heading → short intro → visualization → insights (story-reveal on scroll)
+ *
+ * Reusable patterns:
+ *   .story-section          — section shell (id for nav)
+ *   .story-flow__content   — width + horizontal padding
+ *   .story-insight          — post-viz prose block (section-specific BEM ok)
+ *   .story-reveal           — subtle fade + lift (see story-reveal.css)
+ *   .story-reveal--delay-*  — stagger heading → body → detail
+ *
+ * Init: initStoryScrollReveal() in main.js (js/story/scroll-reveal.js)
+ *
+ * Reveals replay on scroll (not one-shot). Add .story-reveal or data-story-reveal
+ * to section blocks; use data-story-reveal-group for auto-staggered headers.
+ */
+
+.story-section {
+  padding: 3rem clamp(1.25rem, 4vw, 2.5rem) 4rem;
+}
+
+.story-flow__content {
+  width: 100%;
+}
+
+.story-section__footer {
+  margin: 2.5rem 0 0;
+  text-align: left;
+}
+
+.story-section__continue {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.04em;
+}
+
+.story-section__continue a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.story-section__continue a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Editorial prose — left-aligned, not centered report blocks */
+.prose {
+  max-width: 42rem;
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 1.0625rem;
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+}
+
+.prose p {
+  margin: 0 0 1.35rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.prose li {
+  margin-bottom: 0.65rem;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .story-section {
+    padding: 4rem clamp(1.5rem, 5vw, 3rem) 5rem;
+  }
+
+  .prose {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .story-section {
+    padding: 5rem clamp(2rem, 6vw, 4rem) 6rem;
+  }
+}

@@ -1,0 +1,15 @@
+node_id,node_label,node_type,act,sort_order
+source-ecosystem,Greater Boston academic ecosystem,source,2,0
+inst-166027,Harvard University,institution,3,0
+inst-166683,MIT,institution,3,1
+inst-164988,Boston University,institution,3,2
+inst-167358,Northeastern University,institution,3,3
+inst-164924,Boston College,institution,3,4
+inst-168148,Tufts University,institution,3,5
+inst-167987,University of Massachusetts Boston,institution,3,6
+inst-AGG_OTHERS,All other map institutions,institution,3,7
+sink-instruction,Instruction,sink,3,10
+sink-research,Research,sink,3,11
+sink-student_services,Student Services,sink,3,12
+sink-auxiliary,Auxiliary,sink,3,13
+sink-other,Other,sink,3,14

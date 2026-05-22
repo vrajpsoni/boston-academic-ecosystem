@@ -1,0 +1,795 @@
+/* Section 05 — The Academic Economy (cinematic scroll climax) */
+
+#academic-economy {
+  scroll-margin-top: var(--site-header-height, 4rem);
+}
+
+.section-04-story--economy {
+  --econ-bg: #0a0e14;
+  --econ-panel: rgba(12, 10, 9, 0.94);
+  --econ-text: #e8edf4;
+  --econ-muted: #7a8da6;
+  --econ-gold: #c9a227;
+  --econ-gold-soft: rgba(201, 162, 39, 0.55);
+  --econ-glow: rgba(201, 162, 39, 0.22);
+  --econ-lane-track: rgba(255, 255, 255, 0.06);
+  --econ-header: var(--site-header-height, 4rem);
+
+  margin-bottom: 0;
+}
+
+.section-04-story__head--economy {
+  max-width: 44rem;
+  margin-bottom: 2rem;
+}
+
+.section-04-story__head--economy .section-04-story__kicker {
+  margin: 0 0 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--econ-gold);
+}
+
+.section-04-story--economy .section-04-story__title {
+  font-size: clamp(1.55rem, 3.5vw, 2.1rem);
+  color: var(--color-text);
+}
+
+.section-04-story--economy .section-04-story__lede {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 40rem;
+}
+
+/* —— Full-bleed cinema shell —— */
+
+.section-04-economy.econ-cinema {
+  position: relative;
+  overflow: visible;
+  margin-left: calc(-1 * clamp(1.25rem, 4vw, 2.5rem));
+  margin-right: calc(-1 * clamp(1.25rem, 4vw, 2.5rem));
+  width: calc(100% + 2 * clamp(1.25rem, 4vw, 2.5rem));
+  background: var(--econ-bg);
+  color: var(--econ-text);
+  padding: 0;
+  border-radius: 0;
+}
+
+.section-04-economy.econ-cinema::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 50% 38% at 14% 8%, rgba(201, 162, 39, 0.09) 0%, transparent 68%),
+    radial-gradient(ellipse 42% 40% at 88% 72%, rgba(61, 158, 255, 0.05) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(10, 14, 20, 0) 0%, rgba(10, 14, 20, 0.55) 100%);
+  z-index: 0;
+}
+
+.econ-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.econ-ambient__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.econ-status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--econ-gold-soft);
+}
+
+.econ-status--error {
+  color: #f87171;
+}
+
+.econ-cinema__scroller {
+  position: relative;
+  z-index: 1;
+}
+
+.econ-cinema__sticky {
+  position: sticky;
+  top: var(--econ-header);
+  height: calc(100vh - var(--econ-header));
+  height: calc(100dvh - var(--econ-header));
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.econ-cinema__track {
+  /* Scroll breathing room after sticky cinema — does not drive playback timing */
+  height: clamp(3.5rem, 10vh, 6rem);
+  min-height: clamp(3.5rem, 10vh, 6rem);
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* —— Segmented radial progress (sequence pacing cue) —— */
+
+.econ-cinema__progress {
+  position: absolute;
+  top: clamp(1.35rem, 3.5vh, 2.5rem);
+  right: clamp(1.25rem, 4vw, 3rem);
+  z-index: 3;
+  width: 2.35rem;
+  height: 2.35rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.econ-cinema__progress.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.econ-cinema__progress.is-resolved {
+  opacity: 0.94;
+}
+
+.econ-cinema__progress.is-visible .econ-cinema__progress-ring-wrap {
+  filter: drop-shadow(0 0 11px rgba(126, 182, 255, 0.42));
+}
+
+.econ-cinema__progress.is-visible .econ-cinema__progress-ring {
+  filter: none;
+}
+
+.econ-cinema__progress.is-resolved .econ-cinema__progress-ring-wrap {
+  filter: drop-shadow(0 0 13px rgba(201, 162, 39, 0.38))
+    drop-shadow(0 0 7px rgba(126, 182, 255, 0.24));
+  transform: scale(1.02);
+  transition:
+    filter 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.econ-cinema__progress.is-resolved .econ-cinema__progress-ring {
+  filter: none;
+  transform: none;
+}
+
+.econ-cinema__progress-ring-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.econ-cinema__progress-ghost,
+.econ-cinema__progress-composition {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--econ-ring-gradient);
+  pointer-events: none;
+  -webkit-mask-image:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 58%,
+      #000 61%,
+      #000 88%,
+      transparent 91%
+    );
+  mask-image:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 58%,
+      #000 61%,
+      #000 88%,
+      transparent 91%
+    );
+}
+
+.econ-cinema__progress-ghost {
+  opacity: 0.38;
+  filter: drop-shadow(0 0 6px rgba(126, 182, 255, 0.18));
+}
+
+.econ-cinema__progress-composition {
+  --econ-ring-progress: 0deg;
+  opacity: 0;
+  -webkit-mask-image:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 58%,
+      #000 61%,
+      #000 88%,
+      transparent 91%
+    ),
+    conic-gradient(
+      from -90deg,
+      #000 0deg,
+      #000 var(--econ-ring-progress),
+      transparent var(--econ-ring-progress)
+    );
+  mask-image:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 58%,
+      #000 61%,
+      #000 88%,
+      transparent 91%
+    ),
+    conic-gradient(
+      from -90deg,
+      #000 0deg,
+      #000 var(--econ-ring-progress),
+      transparent var(--econ-ring-progress)
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.55));
+  transition: opacity 0.4s ease;
+}
+
+.econ-cinema__progress-composition.is-active {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.16));
+}
+
+.econ-cinema__progress-composition.is-complete {
+  filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.24));
+}
+
+.econ-cinema__progress-ring {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.econ-cinema__progress-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 3.75;
+  opacity: 0.88;
+}
+
+.econ-cinema__progress.is-visible .econ-cinema__progress-track {
+  stroke: rgba(255, 255, 255, 0.26);
+  opacity: 0.95;
+}
+
+.econ-cinema__progress.is-resolved .econ-cinema__progress-track {
+  stroke: rgba(201, 162, 39, 0.34);
+  opacity: 0.72;
+}
+
+.econ-cinema__progress-hub {
+  fill: rgba(255, 255, 255, 0.16);
+  stroke: rgba(255, 255, 255, 0.28);
+  stroke-width: 0.65;
+}
+
+.econ-cinema__progress.is-resolved .econ-cinema__progress-hub {
+  fill: rgba(201, 162, 39, 0.24);
+  stroke: rgba(201, 162, 39, 0.42);
+}
+
+.econ-cinema__stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, clamp(16rem, 26vw, 21rem));
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "hero hero"
+    "lanes detail"
+    "lockup lockup";
+  gap: clamp(1rem, 2.5vh, 1.75rem) clamp(1.25rem, 3vw, 2.5rem);
+  width: 100%;
+  max-width: min(72rem, 100%);
+  height: 100%;
+  padding: clamp(1.5rem, 4vh, 2.75rem) clamp(1.25rem, 4vw, 3rem);
+  box-sizing: border-box;
+}
+
+/* —— Act I: Hero —— */
+
+.econ-cinema__hero {
+  grid-area: hero;
+  align-self: end;
+  padding-bottom: 0.25rem;
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.63s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.econ-cinema--ready .econ-cinema__hero,
+.econ-cinema--reduced .econ-cinema__hero {
+  opacity: 1;
+  transform: none;
+}
+
+.econ-cinema__hero-lead {
+  margin: 0 0 0.85rem;
+  max-width: 28rem;
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--econ-muted);
+  letter-spacing: 0.01em;
+}
+
+.econ-cinema__hero-value {
+  margin: 0;
+  font-size: clamp(3rem, 11vw, 5.5rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  color: var(--econ-gold);
+  text-shadow:
+    0 0 100px var(--econ-glow),
+    0 0 28px rgba(201, 162, 39, 0.14);
+  will-change: contents;
+}
+
+.econ-cinema__hero-value.is-settled {
+  animation: econ-hero-breathe 6s ease-in-out infinite;
+}
+
+@keyframes econ-hero-breathe {
+  0%,
+  100% {
+    text-shadow:
+      0 0 100px var(--econ-glow),
+      0 0 28px rgba(201, 162, 39, 0.14);
+  }
+  50% {
+    text-shadow:
+      0 0 120px rgba(201, 162, 39, 0.32),
+      0 0 36px rgba(201, 162, 39, 0.2);
+  }
+}
+
+.econ-cinema__hero-meta {
+  margin: 0.85rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(122, 141, 166, 0.85);
+}
+
+/* —— Act II–III: Institutional lanes —— */
+
+.econ-cinema__lanes {
+  grid-area: lanes;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.45rem, 1.4vh, 0.7rem);
+  min-height: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.econ-lane {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 11rem) 1fr minmax(3.5rem, 4.5rem);
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  opacity: 0;
+  transform: translate3d(-12px, 0, 0);
+  transition:
+    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.econ-lane.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.econ-cinema--interact .econ-lane.is-visible {
+  pointer-events: auto;
+}
+
+.econ-lane.is-active {
+  opacity: 1;
+}
+
+.econ-lane.is-dimmed {
+  opacity: 0.38;
+}
+
+.econ-lane__name {
+  margin: 0;
+  font-size: clamp(0.68rem, 1.4vw, 0.78rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: rgba(232, 237, 244, 0.88);
+  text-align: right;
+}
+
+.econ-lane--others .econ-lane__name {
+  color: var(--econ-gold-soft);
+}
+
+.econ-lane__track {
+  position: relative;
+  height: clamp(1.1rem, 2.2vh, 1.45rem);
+  background: var(--econ-lane-track);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.econ-lane__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(var(--lane-scale, 0));
+  background: linear-gradient(
+    90deg,
+    rgba(201, 162, 39, 0.35) 0%,
+    rgba(201, 162, 39, 0.12) 55%,
+    rgba(61, 158, 255, 0.08) 100%
+  );
+  border-radius: inherit;
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+.econ-lane__bar {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  transform-origin: left center;
+  transform: scaleX(var(--lane-progress, 0));
+  will-change: transform;
+}
+
+.econ-lane__segment {
+  height: 100%;
+  flex: 0 0 auto;
+  opacity: 0.92;
+}
+
+.econ-lane__amount {
+  margin: 0;
+  font-size: clamp(0.65rem, 1.2vw, 0.72rem);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--econ-muted);
+}
+
+.econ-lane.is-visible .econ-lane__amount {
+  color: rgba(232, 237, 244, 0.75);
+}
+
+.econ-lane--others.is-complete .econ-lane__sub {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: rgba(122, 141, 166, 0.75);
+  text-align: right;
+  grid-column: 1 / -1;
+}
+
+.econ-lane__sub {
+  display: none;
+}
+
+/* —— Act IV: Detail panel (04B-adjacent) —— */
+
+.econ-cinema__detail {
+  grid-area: detail;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 12rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  border: 1px solid rgba(232, 200, 114, 0.12);
+  border-radius: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 10, 9, 0.96) 0%,
+    rgba(10, 14, 20, 0.92) 100%
+  );
+  box-shadow:
+    12px 0 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(232, 200, 114, 0.08);
+  opacity: 0;
+  transform: translate3d(8px, 0, 0);
+  transition:
+    opacity 0.32s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease;
+  pointer-events: none;
+}
+
+.econ-cinema--interact .econ-cinema__detail.is-open {
+  opacity: 1;
+  transform: none;
+  border-color: rgba(232, 200, 114, 0.28);
+  pointer-events: auto;
+}
+
+.econ-cinema__detail-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 114, 0.55);
+}
+
+.econ-cinema__detail-name {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--econ-text);
+}
+
+.econ-cinema__detail-opex {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--econ-gold);
+}
+
+.econ-cinema__detail-note {
+  margin: -0.5rem 0 0.85rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(122, 141, 166, 0.9);
+  font-style: italic;
+}
+
+.econ-cinema__detail-cats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.econ-cinema__detail-cat {
+  display: grid;
+  grid-template-columns: 1fr 3.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.74rem;
+  color: var(--econ-muted);
+}
+
+.econ-cinema__detail-cat-label {
+  margin: 0;
+}
+
+.econ-cinema__detail-cat-val {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: rgba(232, 237, 244, 0.8);
+}
+
+.econ-cinema__detail-cat-bar {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.econ-cinema__detail-cat-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--cat-color, rgba(148, 163, 184, 0.5));
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.econ-cinema__detail.is-open .econ-cinema__detail-cat-bar-fill {
+  transform: scaleX(var(--cat-fill, 0));
+}
+
+.econ-cinema__detail-cat--other .econ-cinema__detail-cat-val {
+  color: rgba(232, 237, 244, 0.72);
+}
+
+.econ-cinema__detail-placeholder {
+  margin: auto 0 0;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(245, 240, 230, 0.38);
+}
+
+/* —— Act V: Lockup —— */
+
+.econ-cinema__lockup {
+  grid-area: lockup;
+  align-self: start;
+  padding-top: 0.5rem;
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.77s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.econ-cinema__lockup.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.econ-cinema__lockup-line {
+  margin: 0 0 0.35rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  line-height: 1.45;
+  color: rgba(232, 237, 244, 0.55);
+  letter-spacing: 0.02em;
+}
+
+.econ-cinema__lockup-line--emphasis {
+  color: var(--econ-gold);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  letter-spacing: -0.01em;
+}
+
+.econ-cinema__lockup-line:last-child {
+  margin-bottom: 0;
+  color: rgba(122, 141, 166, 0.75);
+  font-size: clamp(0.88rem, 1.8vw, 1rem);
+}
+
+/* —— Attribution —— */
+
+.section-04-attribution--economy {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 1.75rem clamp(1.5rem, 5vw, 3.5rem) clamp(2.5rem, 6vw, 3.5rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--econ-muted) !important;
+  text-align: left;
+  font-size: 0.8rem;
+  background: var(--econ-bg);
+}
+
+.section-04-attribution--economy a {
+  color: #7eb8ff;
+}
+
+.section-04-attribution--economy code {
+  font-size: 0.78em;
+  color: rgba(232, 237, 244, 0.85);
+}
+
+/* —— States —— */
+
+.econ-cinema--loading .econ-cinema__scroller {
+  min-height: 50vh;
+  opacity: 0.4;
+}
+
+.econ-cinema--others-pulse .econ-lane--others .econ-lane__fill {
+  box-shadow: 0 0 24px rgba(201, 162, 39, 0.25);
+}
+
+.econ-cinema--playing .econ-ambient {
+  opacity: 0.82;
+}
+
+/* —— Responsive —— */
+
+@media (max-width: 900px) {
+  .econ-cinema__progress {
+    top: clamp(1rem, 2.5vh, 1.75rem);
+    right: clamp(1rem, 3vw, 1.5rem);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .econ-cinema__stage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "lanes"
+      "detail"
+      "lockup";
+    padding-bottom: 1.5rem;
+  }
+
+  .econ-cinema__detail {
+    min-height: 0;
+    max-height: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    opacity: 0 !important;
+  }
+
+  .econ-cinema--interact .econ-lane.is-hovered .econ-lane__name {
+    color: var(--econ-gold);
+  }
+
+  .econ-lane {
+    grid-template-columns: minmax(6rem, 8.5rem) 1fr 3.25rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .econ-lane {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.35rem;
+  }
+
+  .econ-lane__name {
+    text-align: left;
+  }
+
+  .econ-lane__amount {
+    text-align: left;
+  }
+
+  .econ-cinema__hero-value {
+    font-size: clamp(2.5rem, 14vw, 3.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .econ-cinema__hero,
+  .econ-lane,
+  .econ-cinema__lockup,
+  .econ-cinema__detail,
+  .econ-cinema__hero-value.is-settled {
+    animation: none;
+    transition: none;
+  }
+
+  .econ-cinema__progress.is-visible,
+  .econ-cinema__progress.is-resolved {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .econ-lane__fill,
+  .econ-lane__bar {
+    transition: none;
+  }
+
+}

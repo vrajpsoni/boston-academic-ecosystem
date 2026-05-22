@@ -1,0 +1,53 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+.venv*/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets / local config
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+CENSUS_API_KEY
+api_keys.txt
+
+# Editor
+.idea/
+.vscode/
+*.code-workspace
+
+# Archives (optional: remove this line if you want venv archived in git — venv is under _archive/development/venv_docx/)
+# _archive/development/venv_docx/
+
+# Large raw downloads (rebuild from scripts; keep canonical processed CSVs in data/)
+data/raw/**/*.zip
+data/raw/**/F*.zip
+data/raw/**/EF*.zip
+data/raw/**/HD*.zip
+data/section_*/raw/**/*.zip
+data/section_*/raw/**/*.ics
+data/section_*/raw/**/*.json
+
+# Node (if added later)
+node_modules/
+
+# Build / temp
+*.log
+.cache/
+dist/
+build/

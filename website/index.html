@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boston: A Hub of Academic Excellence. A data storytelling project on how universities and student life shape Greater Boston.">
+  <title>Boston: A Hub of Academic Excellence | CS617</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/story-reveal.css?v=5">
+  <link rel="stylesheet" href="css/landing-hero.css?v=5">
+  <link rel="stylesheet" href="css/section-01-map.css">
+  <link rel="stylesheet" href="css/section-02-enrollment.css">
+  <link rel="stylesheet" href="css/section-03-ecosystem-scale.css">
+  <link rel="stylesheet" href="css/section-04-shared.css">
+  <link rel="stylesheet" href="css/section-04a-neighborhoods.css">
+  <link rel="stylesheet" href="css/section-04b-business.css?v=13">
+  <link rel="stylesheet" href="css/section-05-academic-economy.css?v=12">
+  <link rel="stylesheet" href="css/story-outro.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#landing-hero">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a class="site-header__brand site-nav__link--top" href="#landing-hero">Boston: A Hub of Academic Excellence</a>
+      <nav class="site-nav" aria-label="Page sections">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link site-nav__link--top" href="#landing-hero">Home</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#ecosystem-map">Ecosystem map</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#enrollment-trends">Enrollment</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#ecosystem-scale">Ecosystem scale</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#academic-boston">City impact</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#section-04b-business">Corridors</a></li>
+          <li><a class="site-nav__link site-nav__link--section" href="#academic-economy">Academic economy</a></li>
+        </ul>
+        <a
+          class="site-nav__link site-nav__link--section site-nav__link--sources"
+          href="#story-outro"
+          aria-label="Scroll to sources and references"
+        >Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="story-main">
+    <!-- Landing hero (site opener) -->
+    <section
+      id="landing-hero"
+      class="landing-hero"
+      aria-labelledby="landing-hero-title"
+      aria-label="Boston academic excellence, graduation cap backdrop"
+    >
+      <div class="landing-hero__overlay" aria-hidden="true"></div>
+      <div class="landing-hero__inner">
+        <div class="landing-hero__title-wrap">
+          <!-- Comic-style student doodles (decorative) -->
+          <svg class="landing-hero__doodle landing-hero__doodle--cap" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M8 28 L32 14 L56 28 L32 42 Z" fill="#fef3e2" stroke="#1f4e79" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M14 30 L14 48 Q32 56 50 48 L50 30" fill="none" stroke="#1f4e79" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="50" cy="22" r="2.5" fill="#d97706"/>
+          </svg>
+          <svg class="landing-hero__doodle landing-hero__doodle--pencil" viewBox="0 0 48 80" aria-hidden="true">
+            <path d="M8 72 L12 8 L28 4 L24 68 Z" fill="#fff9c4" stroke="#1f4e79" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M12 8 L28 4 L26 18 L10 22 Z" fill="#d97706" stroke="#1f4e79" stroke-width="2"/>
+            <path d="M10 22 L26 18" stroke="#1f4e79" stroke-width="2"/>
+          </svg>
+          <svg class="landing-hero__doodle landing-hero__doodle--book" viewBox="0 0 72 56" aria-hidden="true">
+            <path d="M6 8 Q36 2 66 8 L66 48 Q36 54 6 48 Z" fill="#e8f4fc" stroke="#1f4e79" stroke-width="2.5"/>
+            <path d="M36 8 L36 48" stroke="#1f4e79" stroke-width="2"/>
+            <path d="M14 20 L30 18 M14 32 L28 30" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="landing-hero__doodle landing-hero__doodle--star" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 4 L23 16 L36 16 L26 24 L30 36 L20 28 L10 36 L14 24 L4 16 L17 16 Z" fill="#fef3e2" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="landing-hero__doodle landing-hero__doodle--glasses" viewBox="0 0 80 32" aria-hidden="true">
+            <circle cx="22" cy="16" r="12" fill="none" stroke="#1f4e79" stroke-width="2.5"/>
+            <circle cx="58" cy="16" r="12" fill="none" stroke="#1f4e79" stroke-width="2.5"/>
+            <path d="M34 16 L46 16" stroke="#1f4e79" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M10 16 Q16 8 22 16 M58 16 Q64 8 70 16" fill="none" stroke="#1f4e79" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h1 id="landing-hero-title" class="landing-hero__title">Boston: A Hub of Academic Excellence</h1>
+        </div>
+        <div class="landing-hero__caption-box">
+          <p class="landing-hero__subtitle">
+            Exploring how universities, students, and research institutions shape Greater Boston.
+          </p>
+          <a class="landing-hero__scroll" href="#ecosystem-map">Explore the ecosystem ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Section 01: Greater Boston Academic Ecosystem Map
+         ============================================================ -->
+    <section id="ecosystem-map" class="story-section story-section--ecosystem" aria-labelledby="ecosystem-map-heading">
+      <div class="story-flow__content">
+        <header class="ecosystem-head" data-story-reveal-group>
+          <p class="ecosystem-kicker story-reveal" data-story-reveal>Interactive ecosystem map</p>
+          <h2 id="ecosystem-map-heading" class="ecosystem-head__title story-reveal story-reveal--delay-1" data-story-reveal>Greater Boston Academic Ecosystem</h2>
+          <p class="ecosystem-lede story-reveal story-reveal--delay-2" data-story-reveal>
+            Universities, student housing, and research centers are deeply woven into Greater Boston&rsquo;s identity.
+          </p>
+        </header>
+
+        <div class="ecosystem-map-block story-reveal story-reveal--block" data-story-reveal="block">
+        <div class="map-shell">
+          <div id="ecosystem-map-canvas" class="map-canvas" aria-busy="true">
+            <p class="map-canvas__placeholder" id="ecosystem-map-status">Loading map…</p>
+          </div>
+        </div>
+        <p class="map-attribution">
+          Locations: curated Greater Boston academic ecosystem dataset.
+          Basemap &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+        </p>
+      </div>
+
+        <article class="ecosystem-insight story-insight" aria-label="Map insights">
+          <h3 class="ecosystem-insight__lead story-reveal">Academic Boston is not one campus. It is a network.</h3>
+          <div class="ecosystem-insight__narrative story-reveal story-reveal--delay-1">
+            <p class="ecosystem-insight__text">
+              Wherever you move through Greater Boston, student life is nearby. Almost every mile across
+              the city connects back to a university, student neighborhood, research center, hospital,
+              or academic institution. Instead of feeling like a city that simply contains colleges,
+              Boston feels like a city built around students. The map above highlights how deeply
+              academic life is woven into the identity of Boston and its surrounding neighborhoods.
+            </p>
+          </div>
+          <ul class="ecosystem-insight__highlights story-reveal story-reveal--delay-2">
+            <li><strong>Longwood:</strong> medical schools, hospitals, and student housing in one corridor</li>
+            <li><strong>Fenway / Kenmore:</strong> multiple universities and dense rental zones</li>
+            <li><strong>Cambridge:</strong> Harvard, MIT, and affiliated research within miles</li>
+          </ul>
+        </article>
+
+        <footer class="story-section__footer story-reveal" data-story-reveal>
+          <p class="story-section__continue"><a href="#enrollment-trends">How enrollment has grown →</a></p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Section 02: Enrollment trends
+         ============================================================ -->
+    <section id="enrollment-trends" class="story-section story-section--enrollment" aria-labelledby="enrollment-trends-heading">
+      <div class="story-flow__content">
+        <header class="enrollment-head" data-story-reveal-group>
+          <div class="enrollment-head__doodles" aria-hidden="true">
+            <svg class="enrollment-head__doodle enrollment-head__doodle--arrow" viewBox="0 0 40 48" fill="none">
+              <path d="M20 42 L20 10 M12 18 L20 8 L28 18" stroke="#1f4e79" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="6" r="3" fill="#d97706" opacity="0.85"/>
+            </svg>
+            <svg class="enrollment-head__doodle enrollment-head__doodle--sparkline" viewBox="0 0 56 40" fill="none">
+              <rect x="4" y="4" width="48" height="32" rx="4" stroke="#1f4e79" stroke-width="2" fill="#fef3e2" opacity="0.9"/>
+              <path d="M12 28 L22 22 L30 24 L44 12" stroke="#1f4e79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="44" cy="12" r="3.5" fill="#d97706" opacity="0.8"/>
+            </svg>
+            <svg class="enrollment-head__doodle enrollment-head__doodle--bars" viewBox="0 0 44 44" fill="none">
+              <path d="M8 36 L8 28 M18 36 L18 20 M28 36 L28 14 M38 36 L38 8" stroke="#1f4e79" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M6 36 H40" stroke="#1f4e79" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+            <svg class="enrollment-head__doodle enrollment-head__doodle--curve" viewBox="0 0 52 36" fill="none">
+              <path d="M6 30 C18 28 22 18 34 14 C40 12 44 8 46 6" stroke="#0d9488" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
+              <path d="M40 8 L46 6 L44 12" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+            </svg>
+          </div>
+          <p class="enrollment-kicker story-reveal" data-story-reveal>Enrollment over time</p>
+          <h2 id="enrollment-trends-heading" class="enrollment-head__title story-reveal story-reveal--delay-1" data-story-reveal>How Boston&rsquo;s Student Population Has Grown</h2>
+          <p class="enrollment-lede story-reveal story-reveal--delay-2" data-story-reveal>
+            The map shows where academic life lives. These lines show how many students major universities have enrolled
+            across two decades of change.
+          </p>
+        </header>
+
+        <p class="enrollment-viz-context story-reveal" data-story-reveal>
+          The chart below follows six of Greater Boston&rsquo;s largest universities: Harvard, MIT, Boston University,
+          Northeastern, UMass Boston, and Boston College. Together they represent much of the region&rsquo;s student
+          population and the academic ecosystem the map introduces.
+        </p>
+
+        <div class="enrollment-chart-block story-reveal story-reveal--block" data-story-reveal="block">
+          <p class="enrollment-chart-type">Enrollment trend visualization</p>
+          <div class="enrollment-chart-shell">
+            <div
+              class="enrollment-metric-toggle"
+              id="enrollment-metric-toggle"
+              role="tablist"
+              aria-label="Enrollment category"
+            >
+              <button
+                type="button"
+                class="enrollment-metric-toggle__btn is-active"
+                role="tab"
+                aria-selected="true"
+                data-metric="total"
+              >
+                Total
+              </button>
+              <button
+                type="button"
+                class="enrollment-metric-toggle__btn"
+                role="tab"
+                aria-selected="false"
+                data-metric="domestic"
+                tabindex="-1"
+              >
+                Domestic
+              </button>
+              <button
+                type="button"
+                class="enrollment-metric-toggle__btn"
+                role="tab"
+                aria-selected="false"
+                data-metric="outOfState"
+                tabindex="-1"
+              >
+                Out-of-state
+              </button>
+              <button
+                type="button"
+                class="enrollment-metric-toggle__btn"
+                role="tab"
+                aria-selected="false"
+                data-metric="international"
+                tabindex="-1"
+              >
+                International
+              </button>
+            </div>
+            <p class="enrollment-chart-axis-caption">Enrollment over time</p>
+            <div id="enrollment-chart" class="enrollment-chart" aria-busy="true" role="img" aria-label="Total enrollment by university, 2004 to 2023">
+              <p class="enrollment-chart__status" id="enrollment-chart-status">Loading chart…</p>
+            </div>
+            <p class="enrollment-coverage-note">
+              Each category uses public enrollment records, so the years shown may differ slightly between views.
+            </p>
+          </div>
+          <p class="enrollment-attribution">
+            <span id="enrollment-attribution-detail">Total fall enrollment</span>.
+            Source: U.S. Department of Education,
+            <a href="https://nces.ed.gov/ipeds/" rel="noopener noreferrer">NCES IPEDS</a>, 2004 to 2023.
+            Hover lines to compare. Click the legend to show or hide universities.
+          </p>
+        </div>
+
+        <article class="enrollment-insight story-insight" aria-label="Enrollment insights">
+          <h3 class="enrollment-insight__lead story-reveal">Scale is uneven, but the direction is clear.</h3>
+          <div class="enrollment-insight__narrative story-reveal story-reveal--delay-1">
+            <p class="enrollment-insight__text">
+              Hover the chart to compare universities year by year. Northeastern and Boston University show the
+              steepest long-term growth in total enrollment, while MIT and UMass Boston remain smaller in scale but
+              central to the region&rsquo;s academic identity. Together, these curves show that Greater Boston&rsquo;s
+              student population keeps expanding, shifting, and reshaping the city over time.
+            </p>
+          </div>
+          <ul class="enrollment-insight__highlights story-reveal story-reveal--delay-2">
+            <li><strong>Northeastern:</strong> among the fastest growth in total enrollment since the mid-2000s</li>
+            <li><strong>Boston University:</strong> consistently one of the largest student populations in the region</li>
+            <li><strong>Harvard and MIT:</strong> smaller headcounts than BU or Northeastern, but global research anchors</li>
+          </ul>
+        </article>
+
+        <footer class="story-section__footer story-reveal" data-story-reveal>
+          <p class="story-section__continue"><a href="#ecosystem-scale">See the full scale of the ecosystem →</a></p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Section 03: Ecosystem-scale enrollment (immersive hero)
+         ============================================================ -->
+    <section id="ecosystem-scale" class="story-section story-section--ecosystem-scale" aria-labelledby="ecosystem-scale-heading">
+      <div class="ecosystem-scale__particles" id="ecosystem-scale-particles" aria-hidden="true"></div>
+      <div class="ecosystem-scale__glow" aria-hidden="true"></div>
+      <div class="story-flow__content">
+        <header class="ecosystem-scale-head" data-story-reveal-group>
+          <p class="ecosystem-scale-kicker story-reveal" data-story-reveal>The whole picture</p>
+          <h2 id="ecosystem-scale-heading" class="ecosystem-scale-head__title story-reveal story-reveal--delay-1" data-story-reveal>One Academic Ecosystem. Hundreds of Thousands of Students.</h2>
+          <p class="ecosystem-scale-lede story-reveal story-reveal--delay-2" data-story-reveal>
+            After mapping the region and tracing decades of growth, this is what those institutions add up to right now&mdash;not one campus, but the combined weight of Greater Boston&rsquo;s universities and colleges.
+          </p>
+        </header>
+
+        <div class="ecosystem-scale-hero story-reveal story-reveal--block" data-story-reveal="block">
+          <p class="ecosystem-scale-hero__value" id="ecosystem-scale-hero-value" aria-live="polite">—</p>
+          <span class="ecosystem-scale-hero__label">students enrolled across the ecosystem</span>
+          <p class="ecosystem-scale-hero__meta">
+            <span id="ecosystem-scale-hero-year">Latest reported enrollment · official sources</span>
+            · <span id="ecosystem-scale-institution-count">29 institutions</span>
+          </p>
+        </div>
+
+        <div id="ecosystem-scale-metrics" class="ecosystem-scale-metrics" aria-label="Supporting ecosystem enrollment metrics"></div>
+
+        <article class="ecosystem-scale-narrative story-reveal" data-story-reveal aria-label="Ecosystem scale narrative">
+          <p class="ecosystem-scale-narrative__text">
+            Every pin on the ecosystem map represents real students&mdash;undergraduate, graduate, and professional&mdash;living, studying, and moving through Greater Boston. Together they form a student population larger than many American cities.
+          </p>
+          <p class="ecosystem-scale-narrative__note">
+            Each institution uses the most recent official enrollment on record&mdash;university fact books, Common Data Sets, or NCES IPEDS&mdash;so reporting years may differ slightly by school. International and domestic below are paired to match the headline total; out-of-state is shown separately for context.
+          </p>
+        </article>
+
+        <footer class="story-section__footer story-reveal" data-story-reveal>
+          <p class="story-section__continue"><a href="#academic-boston">How that scale shapes the city →</a></p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Section 04: How Academic Boston Shapes the City
+         Three subsections: neighborhoods · business · academic economy
+         ============================================================ -->
+    <section id="academic-boston" class="story-section story-section--section-04" aria-labelledby="academic-boston-heading">
+      <div class="story-flow__content">
+        <header class="section-04-intro" data-story-reveal-group>
+          <p class="section-04-intro__kicker story-reveal story-reveal--persist" data-story-reveal="persist">City impact</p>
+          <h2 id="academic-boston-heading" class="section-04-intro__title story-reveal story-reveal--delay-1 story-reveal--persist" data-story-reveal="persist">How Academic Boston Shapes the City</h2>
+          <p class="section-04-intro__lede story-reveal story-reveal--delay-2 story-reveal--persist" data-story-reveal="persist">
+            Greater Boston&rsquo;s academic ecosystem does not stay on campus. It reshapes neighborhoods, street-level
+            business, and institutional finance&mdash;told here as three connected stories, ending with the region&rsquo;s academic economy.
+          </p>
+        </header>
+
+        <article id="section-04a-neighborhoods" class="section-04-story section-04-story--04a" aria-labelledby="section-04a-heading">
+          <header class="section-04-story__head" data-story-reveal-group>
+            <h3 id="section-04a-heading" class="section-04-story__title story-reveal story-reveal--persist" data-story-reveal="persist">Student-Centered Neighborhoods</h3>
+            <p class="section-04-story__lede story-reveal story-reveal--delay-2 story-reveal--persist" data-story-reveal="persist">
+              Where student-centered ecosystem concentration appears across Boston&mdash;estimated from neighborhood-level
+              public data and connected to the ecosystem scale you saw earlier. Hover for concentration, counts, and share of the mapped city total.
+            </p>
+          </header>
+
+          <div class="section-04-viz section-04-viz--map story-reveal story-reveal--block story-reveal--persist" data-story-reveal="persist">
+            <div class="map-shell">
+              <div
+                id="section-04a-map-canvas"
+                class="map-canvas section-04a-map-canvas"
+                aria-busy="true"
+                aria-label="Student-centered neighborhood map loading"
+              >
+                <p class="map-canvas__placeholder" id="section-04a-map-status">Loading map…</p>
+              </div>
+            </div>
+            <p class="section-04-chart-type story-reveal story-reveal--persist" data-story-reveal="persist">Chart type · Choropleth map</p>
+            <p class="section-04-attribution">
+              Boundaries: City of Boston / BPDA (Analyze Boston). Concentration: Boston population estimates (2025).
+              Basemap &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.
+            </p>
+          </div>
+        </article>
+
+        <article id="section-04b-business" class="section-04-story section-04-story--04b" aria-labelledby="section-04b-heading">
+          <header class="section-04-story__head" data-story-reveal-group>
+            <h3 id="section-04b-heading" class="section-04-story__title story-reveal story-reveal--persist" data-story-reveal="persist">Business &amp; Social Growth</h3>
+            <p class="section-04-story__lede story-reveal story-reveal--delay-2 story-reveal--persist" data-story-reveal="persist">
+              Greater Boston&rsquo;s academic ecosystem does not stop at campus gates. Cafes, restaurants, bookstores,
+              and coworking spaces cluster along real corridors&mdash;from Harvard Square to Fenway, Allston to the Seaport.
+              Scroll into the network below.
+            </p>
+          </header>
+
+          <div class="section-04-viz section-04-viz--constellation story-reveal story-reveal--block story-reveal--persist" data-story-reveal="persist">
+            <div class="section-04b-immersive__scene">
+              <div class="ecosystem-constellation-shell">
+                <div
+                  id="section-04b-constellation"
+                  class="ecosystem-constellation"
+                  aria-busy="true"
+                  aria-label="Immersive Greater Boston academic ecosystem scene loading"
+                >
+                  <p class="ecosystem-constellation-shell__placeholder" id="section-04b-constellation-status">Tracing ecosystem connections…</p>
+                </div>
+              </div>
+            </div>
+            <p class="section-04-chart-type story-reveal story-reveal--persist" data-story-reveal="persist">Experience · Immersive ecosystem constellation</p>
+            <p class="section-04-attribution">
+              Business counts: OpenStreetMap via Overpass API. Activity signals: MIT public iCal + OSM-derived quartiles (see data/section_04/sources/SECTION_04B_ACTIVITY_METHODOLOGY.md).
+            </p>
+          </div>
+        </article>
+
+        <article
+          id="academic-economy"
+          class="section-04-story section-04-story--04c section-04-story--economy"
+          aria-labelledby="section-04c-heading"
+        >
+          <header class="section-04-story__head section-04-story__head--economy" data-story-reveal-group>
+            <p class="section-04-story__kicker story-reveal story-reveal--persist" data-story-reveal="persist">Economic engine</p>
+            <h3 id="section-04c-heading" class="section-04-story__title story-reveal story-reveal--persist" data-story-reveal="persist">The Academic Economy</h3>
+            <p class="section-04-story__lede story-reveal story-reveal--delay-2 story-reveal--persist" data-story-reveal="persist">
+              Greater Boston&rsquo;s colleges and universities are not only places of learning&mdash;they operate as institutions
+              that move billions of dollars through the region. Figures below are IPEDS Finance operating expenses (2021&ndash;22), not modeled &ldquo;economic impact.&rdquo;
+            </p>
+          </header>
+
+          <div class="section-04-economy econ-cinema" data-econ-root>
+            <div class="econ-ambient" data-econ-ambient aria-hidden="true"></div>
+            <p class="econ-status" data-econ-status hidden>Loading financial data…</p>
+
+            <div class="econ-cinema__scroller" data-econ-scroller>
+              <div class="econ-cinema__sticky" data-econ-sticky>
+                <div class="econ-cinema__stage">
+                  <div
+                    class="econ-cinema__progress"
+                    data-econ-progress
+                    aria-hidden="true"
+                  >
+                    <div class="econ-cinema__progress-ring-wrap">
+                      <div
+                        class="econ-cinema__progress-ghost"
+                        data-econ-progress-ghost
+                        aria-hidden="true"
+                      ></div>
+                      <div
+                        class="econ-cinema__progress-composition"
+                        data-econ-progress-composition
+                        aria-hidden="true"
+                      ></div>
+                      <svg
+                        class="econ-cinema__progress-ring"
+                        viewBox="0 0 40 40"
+                        width="40"
+                        height="40"
+                        focusable="false"
+                      >
+                        <circle
+                          class="econ-cinema__progress-track"
+                          cx="20"
+                          cy="20"
+                          r="14.5"
+                        />
+                        <circle
+                          class="econ-cinema__progress-hub"
+                          cx="20"
+                          cy="20"
+                          r="2.35"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="econ-cinema__hero" data-econ-hero>
+                    <p class="econ-cinema__hero-lead">
+                      Annual operating scale across Greater Boston&rsquo;s academic ecosystem.
+                    </p>
+                    <p class="econ-cinema__hero-value" data-econ-hero-value aria-live="polite">$0</p>
+                    <p class="econ-cinema__hero-meta" data-econ-hero-meta>
+                      29 institutions &middot; FY2022 IPEDS Finance &middot; audited ecosystem total
+                    </p>
+                  </div>
+
+                  <div
+                    class="econ-cinema__lanes"
+                    data-econ-lanes
+                    role="list"
+                    aria-label="Institutional operating expense build-up"
+                  ></div>
+
+                  <aside
+                    class="econ-cinema__detail"
+                    data-econ-detail
+                    aria-live="polite"
+                    aria-hidden="true"
+                    hidden
+                  >
+                    <p class="econ-cinema__detail-kicker">Institutional character</p>
+                    <h4 class="econ-cinema__detail-name" data-econ-detail-name></h4>
+                    <p class="econ-cinema__detail-opex" data-econ-detail-opex></p>
+                    <p class="econ-cinema__detail-note" data-econ-detail-note hidden></p>
+                    <ul class="econ-cinema__detail-cats" data-econ-detail-cats></ul>
+                  </aside>
+
+                  <footer class="econ-cinema__lockup" data-econ-lockup aria-label="Ecosystem summary">
+                    <p class="econ-cinema__lockup-line">29 institutions.</p>
+                    <p class="econ-cinema__lockup-line econ-cinema__lockup-line--emphasis">~$18B annual operating scale.</p>
+                    <p class="econ-cinema__lockup-line">One interconnected academic ecosystem.</p>
+                  </footer>
+                </div>
+              </div>
+              <div class="econ-cinema__track" data-econ-track aria-hidden="true"></div>
+            </div>
+
+            <p class="section-04-attribution section-04-attribution--economy story-reveal" data-story-reveal>
+              NCES IPEDS Finance (F2122): <code>F2E131</code> (private), <code>F1B25</code> (public).
+              Operating expenses only&mdash;not GDP-style impact estimates.
+              <a href="https://nces.ed.gov/ipeds/datacenter/" rel="noopener noreferrer">nces.ed.gov/ipeds</a>
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Cinematic outro — narrative resolution after Academic Economy -->
+    <section
+      id="story-outro"
+      class="story-outro"
+      aria-labelledby="story-outro-heading"
+    >
+      <div class="story-outro__ambient" data-outro-ambient aria-hidden="true"></div>
+      <div class="story-outro__grid" aria-hidden="true"></div>
+      <div class="story-outro__inner">
+        <div class="story-outro__narrative" data-story-reveal-group>
+          <h2 id="story-outro-heading" class="visually-hidden">Closing reflection</h2>
+          <p class="story-outro__lead story-reveal" data-story-reveal>
+            <span class="story-outro__lead-line">Boston&rsquo;s academic ecosystem is a network,</span>
+            <span class="story-outro__lead-line">a city footprint,</span>
+            <span class="story-outro__lead-line">and an economy.</span>
+          </p>
+          <p class="story-outro__text story-reveal story-reveal--delay-1" data-story-reveal>
+            From the map and enrollment arc through neighborhood life,
+            street-level business, and institutional operating scale,
+            the story remains the same:
+            <span class="story-outro__text-emphasis">students and universities are woven into Greater Boston&mdash;not beside it.</span>
+          </p>
+        </div>
+
+        <nav class="story-outro__sources story-reveal story-reveal--delay-2" data-story-reveal aria-label="Project sources">
+          <a class="story-outro__source-link" data-source-key="explore" href="#">
+            Explore sources <span class="story-outro__source-icon" aria-hidden="true">↗</span>
+          </a>
+          <a class="story-outro__source-link" data-source-key="methodology" href="#">
+            View methodology <span class="story-outro__source-icon" aria-hidden="true">↗</span>
+          </a>
+          <a class="story-outro__source-link" data-source-key="repository" href="#">
+            Project repository <span class="story-outro__source-icon" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <p class="story-outro__micro story-reveal story-reveal--delay-3" data-story-reveal>
+          Built using public educational, geographic, and institutional datasets.
+        </p>
+
+        <footer class="story-outro__credits story-reveal story-reveal--delay-3" data-story-reveal aria-label="Credits">
+          <p class="story-outro__credit-line">Boston: A Hub of Academic Excellence</p>
+          <p class="story-outro__credit-line">CS617 Data Visualization</p>
+          <p class="story-outro__credit-line story-outro__credit-line--author">By Vraj Soni</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--minimal">
+    <div class="site-footer__inner">
+      <p>CS617 Final Project · Data visualization · <span id="footer-year"></span></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/map/map-config.js"></script>
+  <script src="js/map/data-loader.js"></script>
+  <script src="js/map/leaflet-map.js"></script>
+  <script src="js/map/markers.js"></script>
+  <script src="js/map/legend-control.js"></script>
+  <script src="js/map/reset-view-control.js"></script>
+  <script src="js/sections/section-01-ecosystem-map.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <script src="js/charts/enrollment-chart.js"></script>
+  <script src="js/sections/section-02-enrollment.js"></script>
+  <script src="js/sections/section-03-ecosystem-scale.js"></script>
+  <script src="js/section-04/shared/lazy-init.js"></script>
+  <script src="js/section-04/shared/geojson-loader.js"></script>
+  <script src="js/section-04/shared/layer-data-loader.js?v=20260522b"></script>
+  <script src="js/section-04/shared/ecosystem-context.js?v=20260522b"></script>
+  <script src="js/section-04/shared/choropleth.js?v=20260522b"></script>
+  <script src="js/section-04/shared/legend.js"></script>
+  <script src="js/section-04/04a/config.js"></script>
+  <script src="js/section-04/04a/tooltips.js"></script>
+  <script src="js/section-04/04a/init.js?v=20260522b"></script>
+  <script src="js/section-04/04b/config.js"></script>
+  <script src="js/section-04/04b/constellation.js"></script>
+  <script src="js/section-04/04b/init.js"></script>
+  <script src="js/section-04/init.js"></script>
+  <script src="js/section-05/config.js?v=9"></script>
+  <script src="js/section-05/format.js?v=9"></script>
+  <script src="js/section-05/data-loader.js?v=9"></script>
+  <script src="js/section-05/ambient.js?v=9"></script>
+  <script src="js/section-05/scroll-cinema.js?v=11"></script>
+  <script src="js/section-05/init.js?v=9"></script>
+  <script src="js/sections/section-05-academic-economy.js"></script>
+  <script src="js/story/outro.js?v=1"></script>
+  <script src="js/story/scroll-reveal.js?v=5"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+DataYear,PeriodLabel,UNITID,Institution,Total,Domestic,International,OutOfState,Source,SourceURL,SourceType
+2023,Fall 2023 (IPEDS EF),164632,Benjamin Franklin Cummings Institute of Technology,2643,2633,10,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),164748,Berklee College of Music,8448,5857,2591,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),164872,Boston Architectural College,787,591,196,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2024,Fall 2024,164924,Boston College,15234,13416,1818,,Boston College Fact Book 2024-25,https://www.bc.edu/content/dam/bc1/offices/irp/ir/factbook/factbook_pdfs/FINAL%20FactBook%202024-25.pdf,institutional_official
+2024,Fall 2024 official census,164988,Boston University,37737,,,2302,Boston University CDS 2024-25,https://www.bu.edu/asir/files/2026/04/CDS_2024_25-updated-sect-I.pdf,institutional_official
+2023,Fall 2023 (IPEDS EF),165112,Bunker Hill Community College,8545,8002,543,754,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165167,Cambridge College,1952,1864,88,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165574,Eastern Nazarene College,1151,1133,18,304,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),166018,Emerson College,717,668,49,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165671,Emmanuel College,2059,2043,16,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165802,Fisher College,1501,1352,149,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2025,Fall 2025,166027,Harvard University,24317,17568,6749,1302,Harvard University OIRA Fact Book,https://oira.harvard.edu/factbook/fact-book-enrollment/,institutional_official
+2023,Fall 2023 (IPEDS EF),166124,Hebrew College,3035,2940,95,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),164368,Hult International Business School,2003,299,1704,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165264,Laboure College of Healthcare,717,706,11,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),166452,Lesley University,3134,3052,82,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),165884,Longy School of Music of Bard College,592,592,0,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),166674,Massachusetts College of Art and Design,1986,1890,96,396,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),166656,Massachusetts College of Pharmacy and Health Sciences,6321,5386,935,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2025,October 2025 census,166683,Massachusetts Institute of Technology,11816,8379,3437,908,MIT Facts (Registrar),https://web.mit.edu/facts/enrollment.html,institutional_official
+2023,Fall 2023 (IPEDS EF),167260,New England Conservatory,1354,1319,35,315,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2024,Fall 2024,167358,Northeastern University,48812,31967,16845,,Northeastern University Institutional Accomplishments datasheet,https://accomplishments.northeastern.edu/wp-content/uploads/2025/03/IAC_24_DATASHEET_03.14.25.pdf,institutional_official
+2023,Fall 2023 (IPEDS EF),167376,Quincy College,4510,4443,67,411,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),167631,Roxbury Community College,1631,1582,49,,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),167783,Simmons University,5053,4880,173,337,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2023,Fall 2023 (IPEDS EF),168005,Suffolk University,6697,5759,938,1051,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef
+2024,Fall 2024 (CDS Oct 15),168148,Tufts University,13599,,,1458,Tufts University CDS 2024-25,https://provost.tufts.edu/institutionalresearch/wp-content/uploads/sites/5/CDS_2024-2025-1.pdf,institutional_official
+2024,Fall 2024,167987,University of Massachusetts Boston,15575,13947,1628,1214,UMass Boston Fast Facts Fall 2024,https://www.umb.edu/media/umassboston/editor-uploads/institutional-research-assessment-planning/Fast-Facts-Fall-2024.pdf,institutional_official
+2023,Fall 2023 (IPEDS EF),168847,Wentworth Institute of Technology,3898,3887,11,292,NCES IPEDS Fall Enrollment (EF),https://nces.ed.gov/ipeds/datacenter/data/EF2023A.zip,ipeds_ef

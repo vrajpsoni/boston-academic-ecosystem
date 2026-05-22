@@ -1,0 +1,208 @@
+/* story-outro.css — cinematic narrative resolution (post–Academic Economy) */
+
+.story-outro {
+  --outro-bg: #0a0e14;
+  --outro-text: #e8edf4;
+  --outro-muted: #8a9bb3;
+  --outro-gold: #c9a227;
+  --outro-gold-soft: rgba(201, 162, 39, 0.45);
+  --outro-max: 40rem;
+
+  position: relative;
+  margin: 0;
+  padding: clamp(5rem, 14vh, 7.5rem) clamp(1.25rem, 4vw, 2.5rem)
+    clamp(3.5rem, 10vh, 5rem);
+  background: var(--outro-bg);
+  color: var(--outro-text);
+  overflow: hidden;
+  scroll-margin-top: var(--site-header-height, 3.25rem);
+}
+
+.story-outro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 42% at 50% 18%, rgba(201, 162, 39, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 48% 38% at 82% 88%, rgba(61, 158, 255, 0.05) 0%, transparent 72%),
+    linear-gradient(180deg, rgba(10, 14, 20, 0.35) 0%, rgba(10, 14, 20, 0.92) 100%);
+  z-index: 0;
+}
+
+.story-outro__ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.story-outro__ambient canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.story-outro__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(61, 158, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 158, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 85%);
+}
+
+.story-outro__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--outro-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-outro__narrative {
+  margin-bottom: clamp(2.5rem, 6vh, 3.5rem);
+}
+
+.story-outro__lead {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: var(--letter-spacing-tight, -0.02em);
+  color: var(--outro-text);
+}
+
+.story-outro__lead-line {
+  display: block;
+}
+
+.story-outro__text {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.75;
+  color: var(--outro-muted);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-outro__text-emphasis {
+  display: block;
+  margin-top: 1.15rem;
+  color: rgba(232, 237, 244, 0.92);
+}
+
+.story-outro__sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.story-outro__source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.42rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: rgba(232, 237, 244, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.story-outro__source-link:hover {
+  color: var(--outro-text);
+  border-color: rgba(201, 162, 39, 0.35);
+  background: rgba(201, 162, 39, 0.08);
+  text-decoration: none;
+}
+
+.story-outro__source-link:focus-visible {
+  outline: 2px solid var(--outro-gold);
+  outline-offset: 2px;
+}
+
+.story-outro__source-link[data-source-placeholder="true"] {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.story-outro__source-link[data-source-placeholder="true"]:hover {
+  color: rgba(232, 237, 244, 0.78);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.story-outro__source-icon {
+  font-size: 0.7em;
+  opacity: 0.65;
+  line-height: 1;
+}
+
+.story-outro__micro {
+  margin: 0 0 clamp(2.75rem, 7vh, 3.75rem);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(138, 155, 179, 0.55);
+  line-height: 1.5;
+}
+
+.story-outro__credits {
+  margin: 0;
+  padding: 0 0 clamp(0.5rem, 2vh, 1rem);
+}
+
+.story-outro__credit-line {
+  margin: 0;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.85;
+  color: rgba(138, 155, 179, 0.42);
+}
+
+.story-outro__credit-line--author {
+  margin-top: 0.35rem;
+  letter-spacing: 0.1em;
+  color: rgba(201, 162, 39, 0.38);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-outro__ambient {
+    display: none;
+  }
+
+  .story-outro__grid {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 520px) {
+  .story-outro__sources {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story-outro__source-link {
+    justify-content: center;
+  }
+}

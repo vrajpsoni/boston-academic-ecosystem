@@ -1,0 +1,356 @@
+/* section-02-enrollment.css — editorial enrollment timeline (Plotly) */
+
+.story-section--enrollment {
+  background: var(--color-bg-subtle);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.story-section--enrollment .story-flow__content {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* —— Header —— */
+.enrollment-head {
+  position: relative;
+  max-width: 52rem;
+  margin: 0 0 1.25rem;
+  padding: 0.15rem 0 0;
+  text-align: left;
+  overflow: visible;
+}
+
+.enrollment-head__doodles {
+  position: absolute;
+  inset: -0.5rem -0.25rem auto -0.25rem;
+  height: 7.5rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.enrollment-head__doodle {
+  position: absolute;
+  opacity: 0.48;
+  filter: drop-shadow(0 1px 3px rgba(31, 78, 121, 0.1));
+}
+
+.enrollment-head__doodle--arrow {
+  width: 2rem;
+  top: 0.15rem;
+  right: 6%;
+  transform: rotate(6deg);
+}
+
+.enrollment-head__doodle--sparkline {
+  width: 2.75rem;
+  top: 2.5rem;
+  right: 0;
+  transform: rotate(-4deg);
+}
+
+.enrollment-head__doodle--bars {
+  width: 2.1rem;
+  bottom: 0.25rem;
+  left: -0.15rem;
+  transform: rotate(-8deg);
+  opacity: 0.42;
+}
+
+.enrollment-head__doodle--curve {
+  width: 2.5rem;
+  top: 0.5rem;
+  left: 38%;
+  transform: rotate(-2deg);
+  opacity: 0.4;
+}
+
+.enrollment-kicker {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.enrollment-head__title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  max-width: 32rem;
+}
+
+.enrollment-lede {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 40rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* —— Bridge into visualization —— */
+.enrollment-viz-context {
+  max-width: 40rem;
+  margin: 0 0 1.15rem;
+  padding: 0 0.15rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* —— Chart block —— */
+.enrollment-chart-block {
+  margin: 0 0 1.75rem;
+}
+
+.enrollment-chart-shell {
+  position: relative;
+  border: 1px solid rgba(31, 78, 121, 0.1);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  box-shadow: 0 2px 20px rgba(31, 78, 121, 0.06);
+  padding: clamp(1rem, 2.5vw, 1.35rem) clamp(0.75rem, 2vw, 1.15rem) 0.35rem;
+  overflow: hidden;
+}
+
+/* —— Chart type label (above visualization) —— */
+.enrollment-chart-type {
+  margin: 0 0 0.65rem;
+  padding: 0 0.15rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.enrollment-metric-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border-soft);
+}
+
+.enrollment-metric-toggle__btn {
+  margin: 0;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.enrollment-metric-toggle__btn:hover:not(:disabled) {
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.enrollment-metric-toggle__btn.is-active {
+  color: var(--color-primary);
+  font-weight: 600;
+  background: var(--color-bg-elevated);
+  box-shadow:
+    0 1px 8px rgba(31, 78, 121, 0.14),
+    0 0 0 1px rgba(31, 78, 121, 0.12);
+}
+
+.enrollment-metric-toggle__btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.enrollment-metric-toggle__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.enrollment-chart-axis-caption {
+  margin: 0 0 0.15rem;
+  padding: 0 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.02em;
+}
+
+.enrollment-coverage-note {
+  margin: 0.5rem 0 0;
+  padding: 0 0.2rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-text-subtle);
+  font-style: italic;
+}
+
+.enrollment-chart {
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+}
+
+.enrollment-chart--ready {
+  min-height: 480px;
+}
+
+.enrollment-chart__status {
+  margin: 0;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* Plotly overrides — light editorial, not dashboard */
+.enrollment-chart .js-plotly-plot,
+.enrollment-chart .plot-container {
+  width: 100% !important;
+}
+
+.enrollment-chart .plotly .modebar {
+  display: none !important;
+}
+
+.enrollment-attribution {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  line-height: 1.5;
+}
+
+.enrollment-attribution a {
+  color: var(--color-text-muted);
+}
+
+/* —— Insights (reuse story-insight rhythm) —— */
+.enrollment-insight {
+  max-width: 52rem;
+}
+
+.enrollment-insight__lead {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-primary);
+}
+
+.enrollment-insight__narrative {
+  margin: 0 0 1.75rem;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid rgba(31, 78, 121, 0.18);
+}
+
+.enrollment-insight__text {
+  margin: 0;
+  font-size: clamp(1.0625rem, 2.1vw, 1.1875rem);
+  line-height: 1.78;
+  color: var(--color-text);
+}
+
+.enrollment-insight__highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.enrollment-insight__highlights li {
+  margin: 0;
+  padding: 0.35rem 0 0.35rem 1rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  border-left: 2px solid rgba(217, 119, 6, 0.45);
+}
+
+.enrollment-insight__highlights strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.story-section--enrollment .story-section__footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  max-width: 52rem;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+@media (min-width: 768px) {
+  .story-section--enrollment {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .enrollment-chart {
+    min-height: 520px;
+  }
+
+  .enrollment-chart--ready {
+    min-height: 540px;
+  }
+}
+
+@media (max-width: 767px) {
+  .enrollment-head__doodle--curve,
+  .enrollment-head__doodle--bars {
+    display: none;
+  }
+
+  .enrollment-head__doodle--arrow {
+    width: 1.65rem;
+    right: 0;
+    opacity: 0.4;
+  }
+
+  .enrollment-head__doodle--sparkline {
+    width: 2.25rem;
+    top: 3rem;
+    opacity: 0.42;
+  }
+
+  .enrollment-chart-shell {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
+  .enrollment-metric-toggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .enrollment-metric-toggle__btn {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}

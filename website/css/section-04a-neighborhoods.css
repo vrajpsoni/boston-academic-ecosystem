@@ -1,0 +1,40 @@
+/* section-04a — Student-Centered Neighborhoods (cool blue atmosphere) */
+
+.section-04-story--04a {
+  position: relative;
+}
+
+.section-04-story--04a::before {
+  content: "";
+  position: absolute;
+  inset: -2rem -10vw 40% -10vw;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 55% at 18% 20%,
+    rgba(126, 200, 227, 0.2) 0%,
+    transparent 72%
+  );
+  z-index: 0;
+}
+
+.section-04-story--04a .section-04-story__head,
+.section-04-story--04a .section-04-viz {
+  position: relative;
+  z-index: 1;
+}
+
+.section-04-story--04a .section-04-chart-type {
+  color: rgba(31, 78, 121, 0.55);
+}
+
+.section-04-story--04a .section-04-viz .map-shell {
+  box-shadow: 0 10px 36px rgba(31, 78, 121, 0.14);
+}
+
+.section-04-story--04a .map-shell {
+  overflow: visible;
+}
+
+.section-04-story--04a .leaflet-container {
+  overflow: hidden;
+}

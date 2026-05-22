@@ -1,0 +1,31 @@
+unitid,institution_name,tier,total_operating_expenses_usd,expense_instruction_usd,expense_research_usd,expense_student_services_usd,expense_auxiliary_usd,opex_varname,source_zip,source_id,source_url,access_date
+164368,Hult International Business School,other,138093502,19194897,1587558,0,337706,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+164632,Benjamin Franklin Cummings Institute of Technology,other,49726866,25532504,4673378,493681,2480440,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+164748,Berklee College of Music,other,296438111,148869622,34779955,7998706,15869257,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+164872,Boston Architectural College,other,19275917,10074724,1906830,447422,1222656,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+164924,Boston College,anchor,956510335,415490585,127655836,49789633,103062836,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+164988,Boston University,anchor,2317075000,960618000,305161000,83643000,145617000,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165112,Bunker Hill Community College,other,128843481,18304216,7442659,,1097438,F1B25,F2122_F1A.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165167,Cambridge College,other,37354788,16716595,3904578,754512,1261209,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165264,Laboure College of Healthcare,other,20781913,10935860,1823819,191084,453611,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165574,Eastern Nazarene College,other,48807841,16322666,4205768,1624145,3966505,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165671,Emmanuel College,other,75813506,27856387,7681406,7431264,10381023,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165802,Fisher College,other,22311603,9395263,1042640,227016,1374690,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+165884,Longy School of Music of Bard College,other,15075123,6171538,1144077,0,313198,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166018,Emerson College,other,35223010,16961013,4458996,672234,2473131,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166027,Harvard University,anchor,5430133000,2206341000,583931000,187534000,428860000,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166124,Hebrew College,other,224174217,87177343,34715412,6959284,18926731,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166452,Lesley University,other,101227756,47931722,11009984,4761946,7572802,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166656,Massachusetts College of Pharmacy and Health Sciences,other,208463156,97215198,22329900,2161923,13647150,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166674,Massachusetts College of Art and Design,other,86142409,191732,2509670,0,3075604,F1B25,F2122_F1A.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+166683,Massachusetts Institute of Technology,anchor,3993328000,1700985000,410937000,158607000,223364000,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167260,New England Conservatory,other,38816563,14585535,3416242,556347,4658760,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167358,Northeastern University,anchor,1668039000,686833000,159495000,32663000,84036000,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167376,Quincy College,other,77027525,7972156,7534063,,0,F1B25,F2122_F1A.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167631,Roxbury Community College,other,34025169,0,1557064,,506753,F1B25,F2122_F1A.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167783,Simmons University,other,190952988,64426786,13276468,7433372,13004904,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+167987,University of Massachusetts Boston,anchor,290019000,9338000,7063000,0,2800000,F1B25,F2122_F1A.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+168005,Suffolk University,other,252939692,101894617,28003637,14722883,17684541,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+168148,Tufts University,anchor,1090769456,471248047,112435117,38868109,71770532,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+168847,Wentworth Institute of Technology,other,93052260,28011046,7943963,0,6366601,F2E131,F2122_F2.zip,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21
+AGG_OTHERS,All other map institutions,aggregate,2194567396,,,,,sum(other_unitids),derived,SRC-IPEDS-FINANCE,https://nces.ed.gov/ipeds/datacenter/,2026-05-21

@@ -1,0 +1,36 @@
+geo_id,geo_name,geo_type,city,state,lat,lon,source_id,boundary_source
+bos_nbhd_15,Roslindale,boston_neighborhood,Boston,MA,42.284695,-71.128278,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_11,Jamaica Plain,boston_neighborhood,Boston,MA,42.304318,-71.112427,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_13,Mission Hill,boston_neighborhood,Boston,MA,42.33056,-71.103481,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_28,Longwood,boston_neighborhood,Boston,MA,42.338485,-71.105361,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_33,Bay Village,boston_neighborhood,Boston,MA,42.34928,-71.068876,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_27,Leather District,boston_neighborhood,Boston,MA,42.350959,-71.058289,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_26,Chinatown,boston_neighborhood,Boston,MA,42.34921,-71.06104,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_14,North End,boston_neighborhood,Boston,MA,42.366814,-71.054368,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_16,Roxbury,boston_neighborhood,Boston,MA,42.316386,-71.089691,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_32,South End,boston_neighborhood,Boston,MA,42.342132,-71.075546,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_02,Back Bay,boston_neighborhood,Boston,MA,42.352499,-71.082401,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_08,East Boston,boston_neighborhood,Boston,MA,42.379763,-71.021352,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_04,Charlestown,boston_neighborhood,Boston,MA,42.378948,-71.057855,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_31,West End,boston_neighborhood,Boston,MA,42.366634,-71.065367,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_30,Beacon Hill,boston_neighborhood,Boston,MA,42.357879,-71.070974,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_07,Downtown,boston_neighborhood,Boston,MA,42.352122,-71.058338,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_34,Fenway,boston_neighborhood,Boston,MA,42.349592,-71.099084,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_25,Brighton,boston_neighborhood,Boston,MA,42.360556,-71.151836,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_19,West Roxbury,boston_neighborhood,Boston,MA,42.281458,-71.143472,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_10,Hyde Park,boston_neighborhood,Boston,MA,42.261659,-71.120106,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_12,Mattapan,boston_neighborhood,Boston,MA,42.274803,-71.093518,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_06,Dorchester,boston_neighborhood,Boston,MA,42.293135,-71.049425,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_29,South Boston Waterfront,boston_neighborhood,Boston,MA,42.347261,-71.037823,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_17,South Boston,boston_neighborhood,Boston,MA,42.335136,-71.033878,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_24,Allston,boston_neighborhood,Boston,MA,42.363194,-71.121361,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+bos_nbhd_22,Harbor Islands,boston_neighborhood,Boston,MA,42.320169,-70.966134,SRC-BOS-NBHD-GEOJSON,Analyze Boston BPDA Neighborhood Boundaries
+place_ma_07740,Brookline,census_place,Brookline,MA,42.3318,-71.1212,SRC-CENSUS-PLACE-REF,Census place centroid (pending place boundary join)
+place_ma_55745,Quincy,census_place,Quincy,MA,42.2529,-70.9928,SRC-CENSUS-PLACE-REF,Census place centroid (pending place boundary join)
+place_ma_21890,Everett,census_place,Everett,MA,42.4084,-71.0537,SRC-CENSUS-PLACE-REF,Census place centroid (pending place boundary join)
+place_ma_38990,Malden,census_place,Malden,MA,42.4251,-71.0662,SRC-CENSUS-PLACE-REF,Census place centroid (pending place boundary join)
+place_ma_11000,Cambridge,census_place,Cambridge,MA,42.3736,-71.1097,SRC-OSM-ADMIN-8,OSM admin boundary; university-adjacent spillover hub
+place_ma_62535,Somerville,census_place,Somerville,MA,42.3876,-71.0995,SRC-OSM-ADMIN-8,OSM admin boundary; secondary spillover hub
+place_ma_13205,Chelsea,census_place,Chelsea,MA,42.3918,-71.0328,SRC-OSM-ADMIN-8,OSM admin boundary; MBTA-adjacent spillover
+place_ma_56395,Revere,census_place,Revere,MA,42.4081,-71.0115,SRC-OSM-ADMIN-8,OSM admin boundary; Blue Line corridor spillover
+place_ma_39835,Medford,census_place,Medford,MA,42.4184,-71.1062,SRC-OSM-ADMIN-8,OSM admin boundary; Tufts / Route 16 adjacency

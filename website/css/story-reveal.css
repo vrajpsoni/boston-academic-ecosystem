@@ -1,0 +1,79 @@
+/* story-reveal.css — global scroll-in motion (replayable) */
+
+@keyframes story-reveal-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--story-reveal-y), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.story-reveal,
+[data-story-reveal] {
+  --story-reveal-y: 10px;
+  --story-reveal-duration: 0.68s;
+  --story-reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --story-reveal-delay: 0ms;
+
+  opacity: 0;
+  transform: translate3d(0, var(--story-reveal-y), 0);
+  will-change: opacity, transform;
+}
+
+.story-reveal.is-revealed,
+[data-story-reveal].is-revealed {
+  animation: story-reveal-enter var(--story-reveal-duration) var(--story-reveal-ease) both;
+  animation-delay: var(--story-reveal-delay);
+}
+
+/* Closing beats — keep legible after fade-in completes */
+.story-outro .story-reveal.is-revealed,
+.story-outro [data-story-reveal].is-revealed,
+.site-footer .story-reveal.is-revealed,
+.site-footer [data-story-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger: heading → body → detail */
+.story-reveal--delay-1,
+[data-story-reveal].story-reveal--delay-1 {
+  --story-reveal-delay: 100ms;
+}
+
+.story-reveal--delay-2,
+[data-story-reveal].story-reveal--delay-2 {
+  --story-reveal-delay: 210ms;
+}
+
+.story-reveal--delay-3,
+[data-story-reveal].story-reveal--delay-3 {
+  --story-reveal-delay: 320ms;
+}
+
+/* Large blocks (map, chart) — slightly slower, minimal lift */
+.story-reveal--block,
+[data-story-reveal="block"] {
+  --story-reveal-y: 14px;
+  --story-reveal-duration: 0.82s;
+}
+
+/* Large viz blocks: reveal once, stay visible while scrolling through */
+.story-reveal--persist.is-revealed,
+[data-story-reveal="persist"].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-reveal,
+  [data-story-reveal] {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    will-change: auto;
+  }
+}

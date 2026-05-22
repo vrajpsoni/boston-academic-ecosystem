@@ -1,0 +1,305 @@
+/* section-01-map.css — editorial map story (visual only; map JS unchanged) */
+
+.story-section--ecosystem {
+  background: var(--color-bg);
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.story-section--ecosystem .story-flow__content {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* —— Header: heading → short lede → map quickly —— */
+.ecosystem-head {
+  max-width: 52rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  text-align: left;
+}
+
+.ecosystem-kicker {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.ecosystem-head__title {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  max-width: 28rem;
+}
+
+.ecosystem-lede {
+  margin: 0;
+  max-width: 38rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* —— Map centerpiece (integrated, not a floating card) —— */
+.ecosystem-map-block {
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.map-shell {
+  position: relative;
+  border: 1px solid rgba(31, 78, 121, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-muted);
+  box-shadow: 0 2px 16px rgba(31, 78, 121, 0.07);
+}
+
+.map-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  background: #e8edf2;
+  z-index: 0;
+}
+
+.map-canvas--ready {
+  background: #e8edf2;
+}
+
+.map-canvas--ready .leaflet-container {
+  width: 100%;
+  min-height: 360px;
+  font-family: var(--font-sans);
+}
+
+.map-canvas__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* Leaflet controls (unchanged behavior) */
+.leaflet-default-view__btn {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  border: none;
+  background: var(--color-bg-elevated);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.2;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.leaflet-default-view__btn:hover {
+  background: var(--color-bg-muted);
+  color: var(--color-primary-hover);
+}
+
+.leaflet-default-view__btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.leaflet-legend {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  max-width: 14.5rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 10px rgba(31, 78, 121, 0.08);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.leaflet-legend__title {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+  color: var(--color-primary);
+}
+
+.leaflet-legend__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leaflet-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.leaflet-legend__item:last-child {
+  margin-bottom: 0;
+}
+
+.leaflet-legend__swatch {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.leaflet-legend__item--university .leaflet-legend__swatch { background: #2166ac; }
+.leaflet-legend__item--college .leaflet-legend__swatch { background: #4393c3; }
+.leaflet-legend__item--student_housing .leaflet-legend__swatch {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+}
+.leaflet-legend__item--research_institute .leaflet-legend__swatch {
+  background: #4daf4a;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.leaflet-legend__item--medical_research .leaflet-legend__swatch {
+  background: #d6604d;
+  border-radius: 2px;
+}
+
+.leaflet-popup-content,
+.leaflet-tooltip {
+  font-family: var(--font-sans);
+}
+
+.leaflet-tooltip {
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 0.4rem 0.55rem;
+}
+
+.leaflet-popup-content .map-tooltip__category {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.map-attribution {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  text-align: left;
+}
+
+.map-attribution a {
+  color: var(--color-text-muted);
+}
+
+/* —— Insights after map: continuous editorial flow —— */
+.ecosystem-insight,
+.story-insight {
+  max-width: 52rem;
+  margin: 0;
+  padding: 1.25rem 0 0;
+  background: transparent;
+}
+
+.ecosystem-insight__lead {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-primary);
+}
+
+.ecosystem-insight__narrative {
+  margin: 0 0 1.75rem;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid rgba(31, 78, 121, 0.18);
+}
+
+.ecosystem-insight__text {
+  margin: 0;
+  font-size: clamp(1.0625rem, 2.1vw, 1.1875rem);
+  line-height: 1.78;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.ecosystem-insight__highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ecosystem-insight__highlights li {
+  margin: 0;
+  padding: 0.35rem 0 0.35rem 1rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  border-left: 2px solid rgba(217, 119, 6, 0.45);
+}
+
+.ecosystem-insight__highlights strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.story-section--ecosystem .story-section__footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  text-align: left;
+  max-width: 52rem;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+@media (min-width: 768px) {
+  .story-section--ecosystem {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .ecosystem-head {
+    margin-bottom: 1.5rem;
+  }
+
+  .ecosystem-head__title {
+    max-width: none;
+  }
+
+  .map-canvas,
+  .map-canvas--ready .leaflet-container {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 767px) {
+  .leaflet-legend {
+    max-width: 12rem;
+    font-size: 0.7rem;
+  }
+}

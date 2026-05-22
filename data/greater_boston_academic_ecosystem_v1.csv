@@ -1,0 +1,88 @@
+id,name,category,city,lat,lon,neighborhood,notes,source,geocode_quality,include_on_map
+harvard-cambridge,Harvard University (Cambridge campus),university,Cambridge,42.3744,-71.1169,Harvard Square,Main Yard / Cambridge anchor,curated_v1,seed,true
+mit-main,Massachusetts Institute of Technology,university,Cambridge,42.3601,-71.0942,Kendall/MIT,Main campus,curated_v1,seed,true
+bu-charles-river,Boston University (Charles River campus),university,Boston,42.3505,-71.1054,Fenway/Kenmore,Primary undergraduate campus,curated_v1,seed,true
+northeastern-main,Northeastern University,university,Boston,42.3398,-71.0892,Fenway/Mission Hill,Main campus,curated_v1,seed,true
+boston-college,Boston College,university,Brookline,42.3355,-71.1685,Chestnut Hill,Main campus (Brookline/Chestnut Hill),curated_v1,seed,true
+tufts-medford,Tufts University (Medford/Somerville),university,Somerville,42.4075,-71.1190,Medford Hillside,Nearby Greater Boston hub; validate border,curated_v1,seed,true
+umass-boston,UMass Boston,university,Boston,42.3135,-71.0384,Dorchester,Columbia Point campus,curated_v1,seed,true
+suffolk-university,Suffolk University,university,Boston,42.3580,-71.0615,Beacon Hill/Downtown,Downtown campus cluster,curated_v1,seed,true
+emerson-college,Emerson College,university,Boston,42.3521,-71.0653,Boston Common area,Downtown Boston,curated_v1,seed,true
+berklee-college,Berklee College of Music,university,Boston,42.3466,-71.0889,Back Bay,Back Bay campus,curated_v1,seed,true
+wentworth-institute,Wentworth Institute of Technology,university,Boston,42.3371,-71.0946,Fenway,Fenway campus,curated_v1,seed,true
+simmons-university,Simmons University,university,Boston,42.3393,-71.1189,Fenway,Longwood-adjacent,curated_v1,seed,true
+mcphs-university,MCPHS University,university,Boston,42.3365,-71.1012,Longwood/Fenway,Health sciences focus,curated_v1,seed,true
+lesley-university,Lesley University,university,Cambridge,42.3868,-71.1190,Porter Square,Porter campus area,curated_v1,seed,true
+massart,Massachusetts College of Art and Design,university,Boston,42.3430,-71.0990,Longwood/Fenway,Art and design,curated_v1,seed,true
+nec-boston,New England Conservatory,university,Boston,42.3422,-71.0868,Back Bay,Huntington Ave,curated_v1,seed,true
+fisher-college,Fisher College,university,Boston,42.3493,-71.0780,Back Bay,Back Bay campus,curated_v1,seed,true
+emmanuel-college,Emmanuel College,university,Boston,42.3408,-71.1049,Fenway,Fenway campus,curated_v1,seed,true
+hult-international,Hult International Business School,university,Cambridge,42.3736,-71.0810,East Cambridge,Graduate business,curated_v1,seed,true
+eastern-nazarene,Eastern Nazarene College,university,Quincy,42.2720,-71.0230,Wollaston,Quincy south shore,curated_v1,seed,true
+harvard-medical,Harvard Medical School,university,Boston,42.3354,-71.1068,Longwood,Longwood Medical Area,curated_v1,seed,true
+harvard-sph,Harvard T.H. Chan School of Public Health,university,Boston,42.3351,-71.1025,Longwood,Longwood,curated_v1,seed,true
+harvard-business,Harvard Business School,university,Boston,42.3672,-71.1240,Allston,Brighton/Allston,curated_v1,seed,true
+harvard-seas,Harvard John A. Paulson School of Engineering and Applied Sciences (SEAS),university,Boston,42.3640,-71.1285,Allston,Allston campus,curated_v1,seed,true
+bu-medical,Boston University School of Medicine,university,Boston,42.3362,-71.0735,South End,BU Medical Campus,curated_v1,seed,true
+tufts-medical-school,Tufts University School of Medicine,university,Boston,42.3494,-71.0628,Chinatown,Tufts Medical Center area,curated_v1,seed,true
+cambridge-college,Cambridge College,university,Cambridge,42.3680,-71.1100,Central Square,Adult-focused programs,curated_v1,seed,true
+longy-music,Longy School of Music of Bard College,university,Cambridge,42.3738,-71.1255,Harvard Square,Music conservatory,curated_v1,seed,true
+boston-architectural,Boston Architectural College,university,Boston,42.3506,-71.0673,Back Bay/Downtown,Design focus,curated_v1,seed,true
+bunker-hill-cc,Bunker Hill Community College,college,Boston,42.3754,-71.0696,Charlestown,Charlestown campus,curated_v1,seed,true
+roxbury-cc,Roxbury Community College,college,Boston,42.3281,-71.0955,Roxbury,Roxbury campus,curated_v1,seed,true
+benjamin-franklin-inst,Benjamin Franklin Institute of Technology,college,Boston,42.3412,-71.0675,South End,Technical college,curated_v1,seed,true
+quincy-college,Quincy College,college,Quincy,42.2520,-71.0025,Quincy Center,Community college,curated_v1,seed,true
+laboure-college,Laboure College of Healthcare,college,Boston,42.3360,-71.1080,Longwood,Healthcare programs,curated_v1,seed,true
+zone-allston-brighton,Allston–Brighton student housing zone (BU west campus),student_housing,Boston,42.3520,-71.1320,Allston,BU-dominated student village,curated_v1,seed,true
+zone-kenmore-fenway,Kenmore / Fenway student housing corridor,student_housing,Boston,42.3485,-71.0975,Kenmore,High-density student rentals,curated_v1,seed,true
+zone-mission-hill,Mission Hill student neighborhood,student_housing,Boston,42.3335,-71.1065,Mission Hill,NE and Longwood access,curated_v1,seed,true
+zone-longwood-students,Longwood student housing and med-student zone,student_housing,Boston,42.3360,-71.1050,Longwood,HMS MCPHS Simmons cluster,curated_v1,seed,true
+zone-ne-west-village,Northeastern West Village / campus housing area,student_housing,Boston,42.3375,-71.0850,Fenway,Northeastern residential footprint,curated_v1,seed,true
+zone-back-bay-students,Back Bay / Bay Village student rentals,student_housing,Boston,42.3500,-71.0820,Back Bay,Suffolk Berklee Emerson overflow,curated_v1,seed,true
+zone-cambridgeport,Cambridgeport / MIT-adjacent student housing,student_housing,Cambridge,42.3570,-71.1080,Cambridgeport,MIT spillover housing,curated_v1,seed,true
+zone-harvard-square-housing,Harvard Square / Harvard student housing area,student_housing,Cambridge,42.3735,-71.1200,Harvard Square,Central student density,curated_v1,seed,true
+zone-porter-lesley,Porter Square / Lesley student housing area,student_housing,Cambridge,42.3880,-71.1220,Porter Square,Lesley corridor,curated_v1,seed,true
+zone-coolidge-bc,Coolidge Corner / Boston College student area,student_housing,Brookline,42.3420,-71.1210,Coolidge Corner,BC spillover,curated_v1,seed,true
+zone-davis-tufts,Davis Square / Tufts-adjacent student housing,student_housing,Somerville,42.3965,-71.1225,Davis Square,Tufts community edge,curated_v1,seed,true
+zone-quincy-students,Quincy Center student / commuter zone,student_housing,Quincy,42.2525,-71.0060,Quincy Center,Quincy College ENC commuters,curated_v1,seed,true
+zone-south-end-bu-med,South End BU Medical campus housing,student_housing,Boston,42.3380,-71.0720,South End,Medical student density,curated_v1,seed,true
+zone-chinatown-tufts-med,Chinatown / Tufts Medical student area,student_housing,Boston,42.3510,-71.0610,Chinatown,Tufts Med students,curated_v1,seed,true
+broad-institute,Broad Institute of MIT and Harvard,research_institute,Cambridge,42.3582,-71.0956,Kendall,Genomics research hub,curated_v1,seed,true
+whitehead-institute,Whitehead Institute for Biomedical Research,research_institute,Cambridge,42.3595,-71.0928,Kendall,MIT-affiliated research,curated_v1,seed,true
+koch-institute,Koch Institute for Integrative Cancer Research (MIT),research_institute,Cambridge,42.3588,-71.0915,Kendall,MIT cancer research,curated_v1,seed,true
+mcgovern-institute,McGovern Institute for Brain Research (MIT),research_institute,Cambridge,42.3610,-71.0910,Kendall,Brain research,curated_v1,seed,true
+wyss-institute,Wyss Institute for Biologically Inspired Engineering,research_institute,Boston,42.3358,-71.1045,Longwood,Harvard-affiliated engineering,curated_v1,seed,true
+ragon-institute,Ragon Institute of MGH MIT and Harvard,research_institute,Cambridge,42.3615,-71.1075,Kendall,Immunology research,curated_v1,seed,true
+joslin-diabetes,Joslin Diabetes Center,research_institute,Boston,42.3368,-71.1095,Longwood,Diabetes research,curated_v1,seed,true
+schepens-eye,Schepens Eye Research Institute (Mass Eye and Ear),research_institute,Boston,42.3610,-71.0700,West End,Vision research,curated_v1,seed,true
+bu-neidl,Boston University NEIDL (National Emerging Infectious Diseases Laboratories),research_institute,Boston,42.3365,-71.0705,South End,Biosafety research facility,curated_v1,seed,true
+mit-csail,MIT Computer Science and Artificial Intelligence Laboratory (CSAIL),research_institute,Cambridge,42.3617,-71.0905,Kendall,AI and CS research,curated_v1,seed,true
+harvard-stem-cell,Harvard Stem Cell Institute (Longwood affiliated),research_institute,Boston,42.3356,-71.1055,Longwood,Stem cell research network,curated_v1,seed,true
+mass-general-hospital,Massachusetts General Hospital,medical_research,Boston,42.3626,-71.0687,West End,Flagship teaching hospital,curated_v1,seed,true
+brigham-womens,Brigham and Women's Hospital,medical_research,Boston,42.3362,-71.1065,Longwood,Longwood partner,curated_v1,seed,true
+beth-israel-deaconess,Beth Israel Deaconess Medical Center,medical_research,Boston,42.3376,-71.1095,Longwood,Harvard teaching hospital,curated_v1,seed,true
+boston-medical-center,Boston Medical Center,medical_research,Boston,42.3364,-71.0732,South End,Safety-net teaching hospital,curated_v1,seed,true
+boston-childrens,Boston Children's Hospital,medical_research,Boston,42.3373,-71.1068,Longwood,Pediatric research hospital,curated_v1,seed,true
+dana-farber-hospital,Dana-Farber Cancer Institute,medical_research,Boston,42.3375,-71.1075,Longwood,Cancer care and research; single Longwood pin,curated_v1,seed,true
+va-boston-jamaica-plain,VA Boston Healthcare System (Jamaica Plain),medical_research,Boston,42.3175,-71.1115,Jamaica Plain,Federal medical center,curated_v1,seed,true
+spaulding-rehab,Spaulding Rehabilitation Hospital,medical_research,Boston,42.3788,-71.0495,Charlestown,Rehabilitation and research,curated_v1,seed,true
+mount-auburn-hospital,Mount Auburn Hospital,medical_research,Cambridge,42.3744,-71.1345,West Cambridge,Teaching hospital Cambridge,curated_v1,seed,true
+cambridge-health-alliance,Cambridge Health Alliance,medical_research,Cambridge,42.3738,-71.1055,East Cambridge,Public teaching system,curated_v1,seed,true
+st-elizabeth-carney,Steward Carney Hospital (Tufts teaching),medical_research,Boston,42.3368,-71.0505,Dorchester,South Boston/Dorchester teaching,curated_v1,seed,true
+tufts-medical-center,Tufts Medical Center,medical_research,Boston,42.3494,-71.0635,Chinatown,Tufts clinical campus,curated_v1,seed,true
+shriners-childrens-boston,Shriners Children's Boston,medical_research,Boston,42.3360,-71.0755,South End,Pediatric specialty,curated_v1,seed,true
+hebrew-college,Hebrew College,university,Brookline,42.3435,-71.1385,Coolidge Corner,Graduate Jewish studies,curated_v1,seed,true
+mass-eye-ear,Massachusetts Eye and Ear,medical_research,Boston,42.3610,-71.0700,West End,Harvard teaching specialty,curated_v1,seed,true
+mgh-charlestown-psych,Massachusetts General Hospital Charlestown (research psychiatry),medical_research,Boston,42.3780,-71.0620,Charlestown,Psychiatry research satellite,curated_v1,seed,true
+zone-brighton-landing,Brighton Landing / Boston Landing student commuter zone,student_housing,Boston,42.3570,-71.1400,Brighton,Commuter rail student access,curated_v1,seed,true
+zone-somerville-inman,Inman Square / Somerville student rentals,student_housing,Somerville,42.3735,-71.0950,Inman Square,Grad student housing corridor,curated_v1,seed,true
+zone-brookline-village,Brookline Village / student rentals near BC,student_housing,Brookline,42.3325,-71.1165,Brookline Village,Brookline student density,curated_v1,seed,true
+wentworth-coops,Wentworth–Northeastern Fenway innovation corridor (area),student_housing,Boston,42.3385,-71.0920,Fenway,Shared Fenway student-tech zone,curated_v1,seed,true
+harvard-law,Harvard Law School,university,Cambridge,42.3779,-71.1185,Cambridge,Graduate professional school,curated_v1,seed,true
+harvard-kennedy,Harvard Kennedy School,university,Cambridge,42.3710,-71.1215,Harvard Square,Public policy,curated_v1,seed,true
+mit-sloan,MIT Sloan School of Management,university,Cambridge,42.3605,-71.0835,East Cambridge,Graduate business at MIT,curated_v1,seed,true
+bu-wheelock-fenway,Boston University Fenway Campus (Wheelock College of Education),university,Boston,42.3490,-71.1060,Fenway,Education and human development,curated_v1,seed,true
+zone-harvard-allston,Harvard Allston / Brighton student and grad housing,student_housing,Boston,42.3650,-71.1250,Allston,Business School and SEAS spillover,curated_v1,seed,true
+zone-nubian-roxbury,Nubian Square / Roxbury student and community colleges area,student_housing,Boston,42.3285,-71.0835,Roxbury,Roxbury CC corridor,curated_v1,seed,true
+zone-charlestown-bhcc,Charlestown / Bunker Hill student corridor,student_housing,Boston,42.3750,-71.0620,Charlestown,BHCC and commuter students,curated_v1,seed,true
+zone-quincy-wollaston,Wollaston beach / ENC student residential area,student_housing,Quincy,42.2700,-71.0200,Wollaston,Eastern Nazarene neighborhood,curated_v1,seed,true

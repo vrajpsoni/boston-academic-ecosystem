@@ -1,0 +1,864 @@
+/* section-04b — Business & Social Growth (full immersive ecosystem scene) */
+
+.section-04-story--04b {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-04-story--04b::before {
+  display: none;
+}
+
+.section-04-story--04b .section-04-story__head {
+  position: relative;
+  z-index: 2;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+}
+
+.section-04-story--04b .section-04-story__title {
+  color: #1f2937;
+  text-shadow: none;
+}
+
+.section-04-story--04b .section-04-story__lede {
+  color: var(--color-text-muted);
+}
+
+.section-04-story--04b .section-04-viz--constellation {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-04b-immersive__scene {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--site-header-height, 4rem));
+  min-height: calc(100dvh - var(--site-header-height, 4rem));
+  display: flex;
+  flex-direction: column;
+}
+
+.ecosystem-constellation-shell {
+  --eco-focus-panel-width: clamp(17.5rem, 28vw, 22.5rem);
+  position: relative;
+  flex: 1;
+  height: calc(92dvh - var(--site-header-height, 4rem));
+  min-height: calc(92vh - var(--site-header-height, 4rem));
+  min-height: calc(92dvh - var(--site-header-height, 4rem));
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  background: #0a0908;
+  box-shadow: none;
+}
+
+.ecosystem-constellation-shell__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 114, 0.45);
+  z-index: 2;
+}
+
+.ecosystem-constellation-shell--ready .ecosystem-constellation-shell__placeholder {
+  display: none;
+}
+
+.ecosystem-constellation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.ecosystem-constellation__scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.ecosystem-constellation__layout {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ecosystem-constellation__stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ecosystem-constellation__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.ecosystem-constellation__focus-panel {
+  flex: 0 0 var(--eco-focus-panel-width);
+  width: var(--eco-focus-panel-width);
+  min-width: 17.5rem;
+  max-width: 22.5rem;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-self: stretch;
+  order: -1;
+  overflow: hidden;
+  border-right: 1px solid rgba(232, 200, 114, 0.14);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 10, 9, 0.96) 0%,
+    rgba(10, 9, 8, 0.92) 100%
+  );
+  box-shadow: 12px 0 40px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.ecosystem-constellation__focus-panel.is-active {
+  border-right-color: rgba(232, 200, 114, 0.32);
+  box-shadow:
+    16px 0 48px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(232, 200, 114, 0.12);
+}
+
+.ecosystem-constellation__focus-panel__chrome {
+  flex: 0 0 auto;
+  padding: 1.25rem 1.4rem 1rem;
+  border-bottom: 1px solid rgba(232, 200, 114, 0.1);
+}
+
+.ecosystem-constellation__focus-panel__kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 114, 0.6);
+}
+
+.ecosystem-constellation__focus-panel__lede {
+  margin: 0 0 1rem;
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: rgba(245, 240, 230, 0.48);
+}
+
+.ecosystem-constellation__focus-panel__hint {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(245, 240, 230, 0.42);
+}
+
+.ecosystem-constellation__layout.is-deep-view .ecosystem-constellation__focus-panel__chrome .ecosystem-constellation__deep-enter {
+  display: none;
+}
+
+.ecosystem-constellation__focus-panel__chrome-actions {
+  position: relative;
+  min-height: 2.75rem;
+}
+
+.ecosystem-constellation__focus-panel__hint,
+.ecosystem-constellation__focus-panel__chrome-actions .ecosystem-constellation__deep-exit {
+  margin: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.ecosystem-constellation__layout:not(.is-deep-view) .ecosystem-constellation__focus-panel__chrome-actions .ecosystem-constellation__deep-exit {
+  position: absolute;
+  inset: 0 auto auto 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ecosystem-constellation__layout.is-deep-view .ecosystem-constellation__focus-panel__hint {
+  position: absolute;
+  inset: 0 auto auto 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ecosystem-constellation__layout.is-focus-active:not(.is-deep-view) .ecosystem-constellation__focus-panel__hint {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ecosystem-constellation__focus-panel__body {
+  display: none;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.ecosystem-constellation__focus-panel__body.has-detail {
+  display: flex;
+  min-height: 10rem;
+}
+
+.ecosystem-constellation__focus-panes {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 10rem;
+  width: 100%;
+}
+
+.ecosystem-constellation__focus-pane {
+  position: absolute;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding: 1.1rem 1.35rem 1.35rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem-constellation__focus-pane.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.ecosystem-constellation__focus-panel__chrome,
+.ecosystem-constellation__focus-panel__body,
+.ecosystem-constellation__deep-enter,
+.ecosystem-constellation__deep-exit {
+  pointer-events: auto;
+}
+
+.ecosystem-constellation__focus-panel__chrome .ecosystem-constellation__deep-enter {
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.85rem;
+}
+
+.ecosystem-constellation__deep-enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.72rem 1.35rem;
+  border: 1px solid rgba(232, 200, 114, 0.45);
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 200, 114, 0.14) 0%,
+    rgba(232, 200, 114, 0.04) 100%
+  );
+  box-shadow:
+    0 0 24px rgba(232, 200, 114, 0.12),
+    inset 0 1px 0 rgba(255, 251, 235, 0.12);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(254, 243, 199, 0.92);
+  cursor: pointer;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.ecosystem-constellation__deep-enter:hover,
+.ecosystem-constellation__deep-enter:focus-visible {
+  border-color: rgba(232, 200, 114, 0.72);
+  box-shadow:
+    0 0 32px rgba(232, 200, 114, 0.22),
+    inset 0 1px 0 rgba(255, 251, 235, 0.18);
+  color: #fffbeb;
+  outline: none;
+}
+
+.ecosystem-constellation__deep-enter[hidden] {
+  display: none;
+}
+
+.ecosystem-constellation__ambient {
+  pointer-events: none;
+}
+
+.ecosystem-constellation__region {
+  fill: rgba(232, 200, 114, 0.035);
+  stroke: rgba(232, 200, 114, 0.06);
+  stroke-width: 1;
+}
+
+.ecosystem-constellation__region-label {
+  fill: rgba(254, 243, 199, 0.18);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  pointer-events: none;
+}
+
+.ecosystem-constellation__hub-link {
+  stroke: rgba(232, 200, 114, 0.1);
+  stroke-width: 1;
+  transition: stroke 0.45s ease, stroke-opacity 0.45s ease;
+}
+
+.ecosystem-constellation__hub-link.is-active {
+  stroke: rgba(232, 200, 114, 0.32);
+  stroke-width: 1.25;
+}
+
+.ecosystem-constellation__cluster {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.4s ease;
+}
+
+.ecosystem-constellation__cluster.is-dimmed {
+  opacity: 0.28;
+}
+
+.ecosystem-constellation__cluster--major .ecosystem-constellation__hub-node {
+  stroke: rgba(255, 251, 235, 0.5);
+  stroke-width: 1.5;
+}
+
+.ecosystem-constellation__cluster--medium .ecosystem-constellation__hub-node {
+  stroke: rgba(255, 251, 235, 0.25);
+  stroke-width: 1;
+}
+
+.ecosystem-constellation__cluster--minor .ecosystem-constellation__hub-node {
+  stroke: rgba(255, 251, 235, 0.15);
+  stroke-width: 0.8;
+  opacity: 0.85;
+}
+
+.ecosystem-constellation__cluster.is-active {
+  opacity: 1;
+}
+
+.ecosystem-constellation__cluster--activity-alive .ecosystem-constellation__hub-glow {
+  fill: rgba(232, 200, 114, 0.14);
+}
+
+.ecosystem-constellation__cluster--activity-alive.is-active .ecosystem-constellation__hub-node {
+  filter: drop-shadow(0 0 4px rgba(232, 200, 114, 0.22));
+}
+
+.ecosystem-constellation__hub-link.is-alive.is-active {
+  stroke: rgba(232, 200, 114, 0.48);
+  stroke-width: 1.35;
+}
+
+.ecosystem-constellation__hub-glow {
+  fill: rgba(232, 200, 114, 0.12);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.ecosystem-constellation__cluster.is-active .ecosystem-constellation__hub-glow {
+  opacity: 0.38;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__cluster.is-active .ecosystem-constellation__hub-glow {
+  opacity: 0.32;
+}
+
+.ecosystem-constellation-shell.is-hub-hover .ecosystem-constellation__hub-link:not(.is-connected) {
+  stroke: rgba(232, 200, 114, 0.06);
+  stroke-opacity: 0.35;
+}
+
+.ecosystem-constellation__cluster.is-active .ecosystem-constellation__hub-node {
+  fill: #f0d78c;
+}
+
+.ecosystem-constellation__hub-label {
+  fill: rgba(254, 243, 199, 0.55);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  pointer-events: none;
+  transition: fill 0.35s ease;
+}
+
+.ecosystem-constellation__cluster--major .ecosystem-constellation__hub-label {
+  font-size: 11px;
+}
+
+.ecosystem-constellation__cluster--medium .ecosystem-constellation__hub-label {
+  font-size: 9.5px;
+}
+
+.ecosystem-constellation__cluster--minor .ecosystem-constellation__hub-label {
+  font-size: 8.5px;
+  fill: rgba(254, 243, 199, 0.38);
+}
+
+.ecosystem-constellation__cluster.is-active .ecosystem-constellation__hub-label {
+  fill: rgba(254, 249, 195, 0.92);
+  font-weight: 600;
+}
+
+.ecosystem-constellation__spoke {
+  stroke: rgba(232, 200, 114, 0.2);
+  stroke-linecap: round;
+  transition: stroke 0.4s ease;
+}
+
+.ecosystem-constellation__cluster.is-active .ecosystem-constellation__spoke {
+  stroke: rgba(232, 200, 114, 0.45);
+}
+
+.ecosystem-constellation__sat-node {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 0.6;
+}
+
+.ecosystem-constellation__detail-tier {
+  margin: 0 0 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 114, 0.65);
+}
+
+.ecosystem-constellation__detail-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #faf6ed;
+}
+
+.ecosystem-constellation__detail-sub {
+  margin: 0 0 1rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(245, 240, 230, 0.55);
+}
+
+.ecosystem-constellation__detail-story {
+  margin: 0 0 1rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid rgba(232, 200, 114, 0.35);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: rgba(232, 200, 114, 0.9);
+}
+
+.ecosystem-constellation__detail-stats {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.ecosystem-constellation__detail-stats li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ecosystem-constellation__detail-stats li span {
+  color: rgba(245, 240, 230, 0.5);
+}
+
+.ecosystem-constellation__detail-stats li strong {
+  color: #faf6ed;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ecosystem-constellation__detail-activity {
+  margin: 0 0 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(232, 200, 114, 0.15);
+}
+
+.ecosystem-constellation__detail-activity-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 114, 0.55);
+}
+
+.ecosystem-constellation__activity-signals {
+  list-style: none;
+  margin: 0 0 0.65rem;
+  padding: 0;
+}
+
+.ecosystem-constellation__activity-signal {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.28rem 0;
+  font-size: 0.76rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.ecosystem-constellation__activity-signal span {
+  color: rgba(245, 240, 230, 0.5);
+}
+
+.ecosystem-constellation__activity-signal strong {
+  font-weight: 600;
+  color: rgba(250, 246, 237, 0.85);
+}
+
+.ecosystem-constellation__activity-signal--high strong,
+.ecosystem-constellation__activity-signal--strong strong {
+  color: #e8c872;
+}
+
+.ecosystem-constellation__activity-highlights {
+  list-style: none;
+  margin: 0 0 0.55rem;
+  padding: 0;
+}
+
+.ecosystem-constellation__activity-highlights li {
+  position: relative;
+  padding: 0.35rem 0 0.35rem 0.85rem;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: rgba(245, 240, 230, 0.72);
+}
+
+.ecosystem-constellation__activity-dot {
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(232, 200, 114, 0.7);
+}
+
+.ecosystem-constellation__activity-src {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.65rem;
+  color: rgba(245, 240, 230, 0.35);
+  font-style: normal;
+}
+
+.ecosystem-constellation__activity-note {
+  margin: 0;
+  font-size: 0.64rem;
+  line-height: 1.45;
+  color: rgba(245, 240, 230, 0.32);
+}
+
+.ecosystem-constellation__detail-note {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.55;
+  color: rgba(245, 240, 230, 0.38);
+}
+
+.ecosystem-constellation__foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 0.85rem clamp(1.25rem, 4vw, 2.5rem);
+  background: linear-gradient(0deg, rgba(10, 9, 8, 0.92) 0%, rgba(10, 9, 8, 0) 100%);
+  pointer-events: none;
+}
+
+.ecosystem-constellation__foot-lead {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(254, 243, 199, 0.4);
+}
+
+.ecosystem-constellation__foot-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.72rem;
+  color: rgba(254, 243, 199, 0.45);
+}
+
+.ecosystem-constellation__foot-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ecosystem-constellation__foot-swatch {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+}
+
+.ecosystem-constellation__foot-swatch--cafes {
+  background: #d4a574;
+}
+.ecosystem-constellation__foot-swatch--restaurants {
+  background: #c67b4e;
+}
+.ecosystem-constellation__foot-swatch--bookstores {
+  background: #9a8fb8;
+}
+.ecosystem-constellation__foot-swatch--coworking {
+  background: #7a9eae;
+}
+
+.section-04-story--04b .section-04-viz--constellation .section-04-chart-type,
+.section-04-story--04b .section-04-viz--constellation .section-04-attribution {
+  max-width: var(--max-width-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem clamp(1.25rem, 4vw, 2.5rem) 0;
+}
+
+.section-04-story--04b .section-04-chart-type {
+  color: rgba(146, 88, 33, 0.7);
+  letter-spacing: 0.1em;
+}
+
+.section-04-story--04b .section-04-attribution {
+  padding-bottom: 2rem;
+}
+
+html.eco-constellation-deep-open,
+body.eco-constellation-deep-open {
+  overflow: hidden;
+  background: #0a0908;
+}
+
+body.eco-constellation-deep-open .site-header {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem-constellation-shell.is-deep-view {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1200;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation,
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__scene,
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__layout {
+  height: 100%;
+  min-height: 0;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__layout {
+  min-height: 100dvh;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__focus-panel {
+  flex: 0 0 var(--eco-focus-panel-width);
+  width: var(--eco-focus-panel-width);
+  min-width: 17.5rem;
+  max-width: 22.5rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__stage {
+  flex: 1 1 auto;
+  opacity: 1;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__foot {
+  opacity: 0.85;
+}
+
+.ecosystem-constellation__deep-exit {
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(232, 200, 114, 0.28);
+  border-radius: 999px;
+  background: rgba(10, 9, 8, 0.72);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(254, 243, 199, 0.78);
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.ecosystem-constellation__deep-exit:hover,
+.ecosystem-constellation__deep-exit:focus-visible {
+  border-color: rgba(232, 200, 114, 0.5);
+  color: #fffbeb;
+  outline: none;
+}
+
+.ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__ambient {
+  opacity: 0.55;
+}
+
+@keyframes eco-hub-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes eco-hub-glow-alive {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .ecosystem-constellation-shell {
+    --eco-focus-panel-width: clamp(17.5rem, 32vw, 20rem);
+  }
+
+  .ecosystem-constellation__focus-panel {
+    flex: 0 0 var(--eco-focus-panel-width);
+    width: var(--eco-focus-panel-width);
+    min-width: 17.5rem;
+    max-width: 20rem;
+  }
+
+  .ecosystem-constellation-shell {
+    min-height: 78vh;
+    min-height: 78dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystem-constellation__layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .ecosystem-constellation__stage {
+    min-height: 58vh;
+    min-height: 58dvh;
+  }
+
+  .ecosystem-constellation-shell {
+    --eco-focus-panel-width: 100%;
+  }
+
+  .ecosystem-constellation__focus-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: 42vh;
+    order: -1;
+    border-right: none;
+    border-bottom: 1px solid rgba(232, 200, 114, 0.14);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.35);
+  }
+
+  .ecosystem-constellation-shell.is-deep-view .ecosystem-constellation__focus-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: 40vh;
+  }
+
+  .ecosystem-constellation__foot {
+    position: relative;
+    background: #0a0908;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-constellation__cluster.is-active .ecosystem-constellation__hub-glow,
+  .ecosystem-constellation__cluster--activity-alive.is-active .ecosystem-constellation__hub-glow,
+  .ecosystem-constellation__focus-pane {
+    transition: none;
+  }
+}

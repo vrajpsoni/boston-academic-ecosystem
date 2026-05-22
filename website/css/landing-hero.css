@@ -1,0 +1,269 @@
+/* landing-hero.css — background image hero, light overlay, comic doodles */
+
+.landing-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 3.75rem);
+  min-height: calc(100dvh - 3.75rem);
+  padding: 3rem 1.5rem 3.5rem;
+  overflow: hidden;
+  border-bottom: none;
+  /* Sky tone from photo — blends edges; fills hero with no letterboxing */
+  background-color: #6eb5dc;
+  background-image: url("../assets/mit-scholar-cap.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Light overlay — text reads on image without a separate card */
+.landing-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 246, 242, 0.35) 0%,
+    rgba(247, 246, 242, 0.18) 45%,
+    rgba(31, 78, 121, 0.12) 70%,
+    rgba(247, 246, 242, 0.42) 100%
+  );
+}
+
+.landing-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Title + comic doodles */
+.landing-hero__title-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 0 1.25rem;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.landing-hero__title {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-primary);
+  text-wrap: balance;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.85),
+    0 0 40px rgba(255, 255, 255, 0.6),
+    0 1px 2px rgba(255, 255, 255, 0.95),
+    0 2px 8px rgba(31, 41, 55, 0.2);
+}
+
+.landing-hero__doodle {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(31, 78, 121, 0.15));
+}
+
+.landing-hero__doodle--cap {
+  width: clamp(3rem, 8vw, 4.5rem);
+  height: auto;
+  top: -0.25rem;
+  left: 2%;
+  transform: rotate(-12deg);
+}
+
+.landing-hero__doodle--pencil {
+  width: clamp(1.75rem, 4vw, 2.5rem);
+  height: auto;
+  top: 0;
+  right: 4%;
+  transform: rotate(18deg);
+}
+
+.landing-hero__doodle--book {
+  width: clamp(3.5rem, 9vw, 5rem);
+  height: auto;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-6deg);
+}
+
+.landing-hero__doodle--star {
+  width: clamp(2rem, 5vw, 2.75rem);
+  height: auto;
+  bottom: 12%;
+  right: 2%;
+  transform: rotate(8deg);
+}
+
+.landing-hero__doodle--glasses {
+  width: clamp(3.5rem, 10vw, 5.5rem);
+  height: auto;
+  top: 42%;
+  right: -2%;
+  transform: rotate(5deg);
+  opacity: 0.92;
+}
+
+/* Subtitle + scroll — local panel below title (does not affect hero bg/overlay) */
+.landing-hero__caption-box {
+  width: 100%;
+  max-width: 38rem;
+  margin-top: 0.5rem;
+  padding: 1.35rem 1.5rem 1.25rem;
+  border: 2.5px solid var(--color-primary);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 4px 24px rgba(31, 78, 121, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.landing-hero__subtitle {
+  margin: 0 0 1.15rem;
+  max-width: none;
+  font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--color-primary);
+  text-wrap: balance;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+
+.landing-hero__scroll {
+  display: inline-block;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #b45309;
+  padding: 0.25rem 0.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #d97706;
+  box-shadow: none;
+  text-shadow: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.landing-hero__scroll:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.landing-hero__scroll:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+@media (min-width: 768px) {
+  .landing-hero {
+    padding: 4.5rem 2rem 5rem;
+    min-height: calc(100vh - 4.5rem);
+    min-height: calc(100dvh - 4.5rem);
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .landing-hero__title-wrap {
+    padding: 3rem 3.5rem 2rem;
+  }
+
+  .landing-hero__doodle--cap {
+    left: 0;
+  }
+
+  .landing-hero__doodle--pencil {
+    right: 0;
+  }
+}
+
+/* Tall/narrow screens: fill height; keep cap at top of image */
+@media (max-aspect-ratio: 4/5) {
+  .landing-hero {
+    background-size: auto 100%;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-hero {
+    min-height: min(92vh, 720px);
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .landing-hero__title-wrap {
+    padding: 2.25rem 0.5rem 1.25rem;
+  }
+
+  .landing-hero__doodle--glasses {
+    display: none;
+  }
+
+  .landing-hero__doodle--cap {
+    left: -2%;
+    width: 2.75rem;
+  }
+
+  .landing-hero__doodle--pencil {
+    right: -2%;
+    width: 1.5rem;
+  }
+
+  .landing-hero__doodle--book {
+    width: 3rem;
+    bottom: -4%;
+  }
+
+  .landing-hero__caption-box {
+    padding: 1.15rem 1.2rem 1.1rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .landing-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(247, 246, 242, 0.55) 0%,
+      rgba(247, 246, 242, 0.35) 50%,
+      rgba(247, 246, 242, 0.6) 100%
+    );
+  }
+
+  .landing-hero__title {
+    text-shadow:
+      0 0 24px #fff,
+      0 0 8px #fff,
+      0 1px 2px rgba(0, 0, 0, 0.35);
+  }
+
+  .landing-hero__caption-box {
+    background: rgba(255, 255, 255, 0.88);
+  }
+}
