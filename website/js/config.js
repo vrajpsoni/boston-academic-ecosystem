@@ -40,25 +40,29 @@
     },
 
     /**
-     * Source / methodology links — leave href empty until final URLs are ready.
+     * Source / methodology links (live repo).
+     * Navbar Sources control stays #story-outro in index.html (in-page scroll).
      * registry: future paths for docs (not wired to UI until hrefs are set).
      */
     sources: {
-      /** Navbar Sources → #story-outro (in-page); outro pills wired below */
+      navbar: {
+        href: "https://github.com/vrajpsoni/boston-academic-ecosystem",
+        external: true,
+      },
       outro: {
         explore: {
           label: "Explore sources",
-          href: "",
+          href: "https://github.com/vrajpsoni/boston-academic-ecosystem/tree/main/data",
           external: true,
         },
         methodology: {
           label: "View methodology",
-          href: "",
+          href: "https://github.com/vrajpsoni/boston-academic-ecosystem/tree/main/docs",
           external: true,
         },
         repository: {
           label: "Project repository",
-          href: "",
+          href: "https://github.com/vrajpsoni/boston-academic-ecosystem",
           external: true,
         },
       },
