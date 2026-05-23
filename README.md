@@ -5,7 +5,7 @@
 
 An editorial data storytelling website exploring how Greater Boston’s universities, students, and institutions shape the city—spatially, over time, at street level, and through audited operating scale.
 
-**Live demo: https://vrajpsoni.github.io/boston-academic-ecosystem/
+**Live demo: https://vrajpsoni.github.io/boston-academic-ecosystem/**
 
 ![Landing hero](website/assets/mit-scholar-cap.png)
 
